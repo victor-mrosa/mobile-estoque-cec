@@ -1,0 +1,323 @@
+"'Screen Home Page' As screen":
+    LoadingSpinner: =LoadingSpinner.Controls
+
+    ctnHomePageFooter As groupContainer.manualLayoutContainer:
+        Height: =72
+        Width: =640
+        Y: =1064
+        ZIndex: =1
+
+        lblPaginaInicialFooter As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(24, 56, 132, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Semibold
+            Height: =71
+            OnSelect: |-
+                =Launch("https://autoglass365.sharepoint.com/sites/portal-appcorp")
+            Size: =25
+            Text: ="Aplicações Corporativas ® 2021"
+            Width: =640
+            Y: =1
+            ZIndex: =1
+
+    ctnHomePageContent As groupContainer.manualLayoutContainer:
+        Height: =960
+        Width: =640
+        Y: =118
+        ZIndex: =3
+
+        grpNavCadProduto As group:
+            Height: =5
+            Width: =5
+            X: =20
+            Y: =37
+            ZIndex: =9
+
+            imgCadProduto As image:
+                Height: =60
+                Image: ='tela-inicial-imgCadastrarProduto'
+                OnSelect: =
+                Width: =60
+                X: =68
+                Y: =271
+                ZIndex: =12
+
+            lblCadProdutoSubtitle As label:
+                Color: =RGBA(128, 128, 128, 1)
+                Font: =Font.'Lato Light'
+                Height: =51
+                OnSelect: =""
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: |-
+                    ="Precisa de um novo produto no estoque?
+                    Solicite aqui neste formulário"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =292
+                X: =144
+                Y: =293
+                ZIndex: =13
+
+            lblCadProdutoTitle As label:
+                Font: =Font.'Lato Black'
+                Height: =Self.Size * 1.8
+                OnSelect: =""
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: ="Cadastrar Produto"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =315
+                X: =144
+                Y: =257
+                ZIndex: =14
+
+            btnCadProduto As button:
+                BorderColor: =RGBA(231, 231, 231, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =120
+                HoverFill: =RGBA(231, 231, 231, 0.15)
+                OnSelect: |
+                    =Navigate('Screen Register Product',ScreenTransition.CoverRight);
+                PaddingRight: =10
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =24
+                Text: =""
+                Width: =559
+                X: =41
+                Y: =241
+                ZIndex: =15
+
+        grpNavAuditoria As group:
+            Height: =5
+            Width: =5
+            X: =19
+            Y: =-103
+            ZIndex: =13
+
+            imgAuditoria As image:
+                Height: =60
+                Image: ='tela-inicial-imgAuditoria'
+                OnSelect: =
+                Width: =60
+                X: =68
+                Y: =419
+                ZIndex: =6
+
+            lblAuditoriaSubtitle As label:
+                Color: =RGBA(128, 128, 128, 1)
+                Font: =Font.'Lato Light'
+                Height: =51
+                OnSelect: =""
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: |-
+                    ="Precisa auditar dados no estoque?
+                    Clique aqui"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =292
+                X: =144
+                Y: =435
+                ZIndex: =7
+
+            lblAuditoriaTitle As label:
+                Font: =Font.'Lato Black'
+                Height: =Self.Size * 1.8
+                OnSelect: =""
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: ="Auditoria"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =315
+                X: =144
+                Y: =399
+                ZIndex: =8
+
+            btnAuditoria As button:
+                BorderColor: =RGBA(231, 231, 231, 1)
+                DisabledBorderColor: =RGBA(230, 230, 230, 0.5)
+                DisabledFill: =RGBA(244, 244, 244, 0.7)
+                DisplayMode: =If(UserPerfil = "Operador", DisplayMode.Disabled, DisplayMode.Edit)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =120
+                HoverFill: =RGBA(231, 231, 231, 0.15)
+                OnSelect: |-
+                    =Navigate('Screen Audit Manager',ScreenTransition.CoverRight, {locCtnAuditMenu: true, locSetaNav: true});
+                PaddingRight: =10
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =24
+                Text: =""
+                Width: =559
+                X: =41
+                Y: =384
+                ZIndex: =9
+
+        lblPaginaInicialDescricao As label:
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Semibold
+            Height: =48
+            PaddingLeft: =20
+            Size: =16
+            Text: ="SELECIONE UMA DAS OPÇÕES ABAIXO."
+            Underline: =true
+            Width: =640
+            Y: =24
+            ZIndex: =17
+
+        grpNavMovEstoque As group:
+            Height: =5
+            Width: =5
+            X: =60
+            Y: =60
+            ZIndex: =18
+
+            imgMovEstoque As image:
+                Height: =60
+                Image: ='tela-paginainicial-imgTransferencia'
+                OnSelect: =
+                Width: =60
+                X: =69
+                Y: =131
+                ZIndex: =1
+
+            lblMovEstoqueSubtitle As label:
+                Color: =RGBA(128, 128, 128, 1)
+                Font: =Font.'Lato Light'
+                Height: =51
+                OnSelect: =""
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =12
+                Text: |-
+                    ="Precisa dar entrada ou saída no estoque?
+                    Solicite aqui neste formulário"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =292
+                X: =152
+                Y: =153
+                ZIndex: =10
+
+            lblMovEstoqueTitle As label:
+                Font: =Font.'Lato Black'
+                Height: =Self.Size * 1.8
+                OnSelect: =""
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: ="Movimentar Estoque"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =315
+                X: =152
+                Y: =117
+                ZIndex: =11
+
+            btnMovEstoque As button:
+                BorderColor: =RGBA(231, 231, 231, 1)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =120
+                HoverFill: =RGBA(231, 231, 231, 0.15)
+                OnSelect: |
+                    =Navigate(
+                        'Screen Stock View',
+                        ScreenTransition.CoverRight,
+                        {
+                            locMessagemProduto: false,
+                            locBarCode: true
+                        }
+                    );
+                PaddingRight: =10
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =24
+                Text: =""
+                Width: =559
+                X: =40
+                Y: =101
+                ZIndex: =16
+
+    ctnHomePageHeader As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(24, 56, 132, 1)
+        Height: =118
+        Width: =640
+        ZIndex: =4
+
+        imgVoltarHeader As image:
+            Height: =70
+            Image: ='header-ImgSeta'
+            OnSelect: =Navigate('Screen Home',ScreenTransition.UnCoverRight);
+            PaddingLeft: =10
+            Width: =98
+            Y: =40
+            ZIndex: =6
+
+        grpInfoUsuario As group:
+            Height: =5
+            Width: =5
+            X: =60
+            Y: =60
+            ZIndex: =7
+
+            lblNomeHeader As label:
+                Align: =Align.Right
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Open Sans Condensed'
+                FontWeight: =FontWeight.Semibold
+                Height: =51
+                PaddingRight: =10
+                Size: =23
+                Text: =User().FullName
+                Width: =412
+                X: =114
+                Y: =14
+                ZIndex: =3
+
+            imgPerfilHeader As image:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                Height: =89
+                Image: =User().Image
+                RadiusBottomLeft: =300
+                RadiusBottomRight: =300
+                RadiusTopLeft: =300
+                RadiusTopRight: =300
+                Width: =90
+                X: =540
+                Y: =10
+                ZIndex: =4
+
+            lblDepartamentoHeader As label:
+                Align: =Align.Right
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Lato
+                Height: =34
+                Italic: =true
+                PaddingRight: =10
+                Size: =12
+                Text: ='users-office'.UserProfileV2(User().Email).department
+                Width: =412
+                X: =114
+                Y: =65
+                ZIndex: =5
+

@@ -1,0 +1,14 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |+
+        =Concurrent(
+            ClearCollect(collectionProdutos, listProdutos),
+            ClearCollect(collectionAuditoria, listAuditoria),
+            ClearCollect(collectionAuditoriaEnderecos, listProdutos)
+        );
+        
+        Set(UserPerfil,LookUp(listUsuarios,'Nome Usuario'.Email = User().Email).Perfil.Value);
+        
+        
+    StartScreen: =
+

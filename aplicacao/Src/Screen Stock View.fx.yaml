@@ -1,0 +1,338 @@
+"'Screen Stock View' As screen":
+    LoadingSpinner: =LoadingSpinner.Data
+    OnVisible: |-
+        =ClearCollect(collectionProdutos, listProdutos);
+        
+        UpdateContext({locOcultarEstoque: First(Filter(listParametros,Descricao = "Ocultar valores do estoque")).Valor})
+
+    ctnViewStockContent As groupContainer.manualLayoutContainer:
+        Height: =891
+        Width: =640
+        Y: =245
+        ZIndex: =1
+
+        "glrListProdutosEstoque As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+            Height: =862
+            Items: |
+                =If(IsBlank(cmbFiltersCategoria.Selected.Categoria),
+                    SortByColumns(
+                    Filter(collectionProdutos,
+                        Or(
+                            txtFilterInputPesquisar.Text in Descricao,
+                            txtFilterInputPesquisar.Text in 'Codigo Produto'
+                        )
+                    ),"Created",Descending),
+                    SortByColumns(
+                    Filter(collectionProdutos,
+                        Or(
+                            txtFilterInputPesquisar.Text in Descricao,
+                            txtFilterInputPesquisar.Text in 'Codigo Produto'
+                        ),
+                        StartsWith(Categoria.Value,cmbFiltersCategoria.Selected.Categoria)
+                    ),"Created",Descending)
+                )
+            Layout: =Layout.Vertical
+            NavigationStep: =2
+            ShowNavigation: =true
+            ShowScrollbar: =false
+            TemplatePadding: =8
+            TemplateSize: =183
+            Transition: =Transition.Pop
+            ZIndex: =1
+
+            btnLayoutItems As button:
+                BorderColor: =RGBA(231, 231, 231, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisplayMode: =DisplayMode.Disabled
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =168
+                HoverFill: =White
+                OnSelect: =Select(Parent)
+                Size: =24
+                Text: =""
+                Width: =560
+                X: =33
+                Y: =13
+                ZIndex: =1
+
+            icoSelecionarProduto As icon.ChevronRight:
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =50
+                Icon: =Icon.ArrowRight
+                OnSelect: |-
+                    =Navigate(
+                        'Screen Selected Move Stock',
+                        ScreenTransition.CoverRight,
+                        {
+                            produtoSelecionado: First(Filter(collectionProdutos,'Codigo Produto' = glrListProdutosEstoque.Selected.'Codigo Produto'))
+                        }
+                    )
+                Width: =50
+                X: =512
+                Y: =72
+                ZIndex: =5
+
+            grpFieldsList As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =8
+
+                lblItemCodProduto As label:
+                    Color: =RGBA(116, 116, 116, 1)
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Bold
+                    Height: =38
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =0
+                    Size: =12
+                    Text: ="CODPRODUTO " & ThisItem.'Codigo Produto'
+                    Width: =451
+                    X: =49
+                    Y: =138
+                    ZIndex: =2
+
+                lblItemLocal As label:
+                    Font: =Font.Lato
+                    Height: =29
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =0
+                    Text: |-
+                        =Concatenate("Local: ",ThisItem.Local.Value)
+                    Width: =275
+                    X: =225
+                    Y: =98
+                    ZIndex: =3
+
+                lblItemQuantidade As label:
+                    Font: =Font.Lato
+                    Height: =29
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =13
+                    Text: |-
+                        =Concatenate("Quantidade: ", 
+                            If(locOcultarEstoque = "Sim", "-",ThisItem.Quantidade)
+                        )
+                    Width: =176
+                    X: =49
+                    Y: =98
+                    ZIndex: =4
+
+                lblItemDescricao As label:
+                    Font: =Font.'Lato Black'
+                    Height: =62
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    Size: =15
+                    Text: =ThisItem.Descricao
+                    Width: =451
+                    X: =49
+                    Y: =20
+                    ZIndex: =6
+
+    ctnViewStockFilters As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(241, 244, 249, 1)
+        Height: =160
+        Width: =560
+        X: =40
+        Y: =85
+        ZIndex: =2
+
+        txtFilterInputPesquisar As text:
+            BorderThickness: =1
+            Default: =""
+            Font: =Font.Lato
+            Height: =50
+            HintText: ="Pesquisar pelo produto ou código"
+            HoverFill: =RGBA(0, 0, 0, 0)
+            PaddingLeft: =10
+            PressedBorderColor: =RGBA(0, 18, 107, 1)
+            PressedColor: =Black
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =1
+            RadiusBottomRight: =1
+            RadiusTopLeft: =1
+            RadiusTopRight: =1
+            Size: =16
+            Tooltip: ="Buscar itens"
+            Width: =496
+            X: =41
+            Y: =92
+            ZIndex: =2
+
+        cmbFiltersCategoria As combobox:
+            BorderThickness: =1
+            DisplayFields: =["Categoria"]
+            Font: =Font.Lato
+            Height: =50
+            InputTextPlaceholder: ="Filtrar por categoria"
+            Items: =cmbCategorias.Categoria
+            SearchFields: =["Categoria"]
+            SearchItems: =Search(cmbCategorias.Categoria,cmbFiltersCategoria.SearchText,"Categoria")
+            SelectMultiple: =false
+            Size: =16
+            Width: =496
+            X: =41
+            Y: =14
+            ZIndex: =3
+
+    ctnViewStockHeader As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(24, 56, 132, 1)
+        Height: =70
+        Width: =640
+        ZIndex: =3
+
+        lblHeaderTitle As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =25
+            Text: ="Visualizar Estoque"
+            Width: =640
+            ZIndex: =1
+
+        imgHeaderSeta As image:
+            Height: =70
+            Image: ='header-ImgSeta'
+            OnSelect: =Navigate('Screen Home Page',ScreenTransition.UnCoverRight);
+            PaddingLeft: =10
+            Width: =98
+            ZIndex: =2
+
+        ReadBarCodeHeader As barcodeScanner:
+            BorderColor: =White
+            BorderThickness: =1
+            Fill: =RGBA(24, 56, 132, 1)
+            Font: =Font.'Lato Black'
+            Height: =41
+            HoverFill: =RGBA(255, 255, 255, 0)
+            OnScan: |-
+                =UpdateContext({produtoSelecionado:LookUp(collectionProdutos,'Codigo Produto'=Value(ReadBarCodeHeader.Value))});
+                
+                If(IsBlank(produtoSelecionado.'Codigo Produto'),
+                    UpdateContext({locMessagemProduto: true ,locBarCode: false}),
+                    Navigate('Screen Selected Move Stock',ScreenTransition.CoverRight,
+                    {
+                        produtoSelecionado:LookUp(collectionProdutos,'Codigo Produto'=Value(ReadBarCodeHeader.Value))
+                    })
+                );
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =10
+            Text: ="Digitalizar"
+            Visible: =locBarCode
+            Width: =83
+            X: =540
+            Y: =14
+            ZIndex: =3
+
+    ctnViewStockShowDialog As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =1066
+        Visible: =locMessagemProduto
+        Width: =640
+        Y: =70
+        ZIndex: =4
+
+        imgErroProduto As image:
+            Height: =282
+            Image: ='tela-movimentarestoque-imgError'
+            Width: =282
+            X: =179
+            Y: =90
+            ZIndex: =5
+
+        grpConteudoMensagem As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =5
+
+            lblSubtitle As label:
+                Align: =Align.Center
+                Font: =Font.'Open Sans Condensed'
+                Height: =115
+                PaddingLeft: =10
+                PaddingRight: =10
+                Size: =30
+                Text: ="Clique no botão abaixo para cadastrar em nosso estoque."
+                Width: =640
+                Y: =503
+                ZIndex: =3
+
+            lblTitle As label:
+                Align: =Align.Center
+                Font: =Font.'Open Sans Condensed'
+                FontWeight: =FontWeight.Semibold
+                Height: =79
+                Size: =40
+                Text: ="Produto não encontrado!"
+                Width: =640
+                Y: =424
+                ZIndex: =4
+
+        grpBottomActions As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =6
+
+            btnMensagemFechar As button:
+                BorderColor: =White
+                BorderThickness: =1
+                Fill: =RGBA(192, 57, 43, 1)
+                Font: =Font.'Open Sans Condensed'
+                Height: =77
+                HoverBorderColor: =ColorFade(Self.Fill, 20%)
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: |-
+                    =Navigate('Screen Stock View',ScreenTransition.CoverRight);
+                    
+                    UpdateContext({locMessagemProduto: false, locBarCode: true})
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =30
+                Text: ="Fechar"
+                Width: =500
+                X: =70
+                Y: =855
+                ZIndex: =1
+
+            btnMensagemCadastrarProduto As button:
+                BorderColor: =White
+                BorderThickness: =1
+                Fill: =RGBA(24, 56, 132, 1)
+                Font: =Font.'Open Sans Condensed'
+                Height: =77
+                OnSelect: |-
+                    =Navigate('Screen Register Product',ScreenTransition.CoverRight);
+                    
+                    UpdateContext({locMessagemProduto: false, locBarCode: true})
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =30
+                Text: ="Cadastrar Produto"
+                Width: =500
+                X: =70
+                Y: =751
+                ZIndex: =2
+

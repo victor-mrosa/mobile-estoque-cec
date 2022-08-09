@@ -1,0 +1,241 @@
+{
+  "548e3042-69a4-4f9b-91d8-3eb1d9de403e": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1588/1.0.1588.2938/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://autoglass365.sharepoint.com/sites/app-estoque": {
+        "dataSources": {
+          "listParametros": {
+            "tableName": "deab50b5-36a6-44b0-aaf9-03f38a2f6a6a"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "cmbCategorias",
+      "cmbFinalidade",
+      "listAuditoria",
+      "listMovimentacao",
+      "cmbEnderecos",
+      "listUsuarios",
+      "listParametros",
+      "listGerarAuditorias",
+      "listProdutosAuditados",
+      "listProdutos"
+    ],
+    "dependencies": {},
+    "dependents": [
+      "eec28f40-0a53-4d53-b6f6-fd94a7f7033b"
+    ],
+    "id": "548e3042-69a4-4f9b-91d8-3eb1d9de403e"
+  },
+  "7b535035-4431-43b8-9fc0-5c0a6a839599": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Usuários do Office 365",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1563/1.0.1563.2732/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "users-office"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "7b535035-4431-43b8-9fc0-5c0a6a839599"
+  },
+  "7e579f8a-3598-486b-89eb-890270eb3f14": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-23.brazilsouth.logic.azure.com:443/workflows/5d87ae1e947248758c4763683971538a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=RDmcZmOphJ1YUPdt0CdmSNnVBkXgCU_eYaFLHOuwoPw",
+      "workflowEndpoint": "/subscriptions/5072fcc3-8341-442e-9b98-4b441017c969/resourceGroups/00466ab9c56049f086af238be4a1ac67-2cb2f7c67a6043b58c974b21949aab67-env/providers/Microsoft.Logic/workflows/8275a5df-c4d0-1f43-3bf3-a58dc2958863",
+      "workflowEntityId": "6e27670f-4075-ec11-8943-000d3a88df92",
+      "workflowName": "8275a5df-c4d0-1f43-3bf3-a58dc2958863",
+      "workflowPath": "/subscriptions/5072fcc3-8341-442e-9b98-4b441017c969/resourceGroups/00466ab9c56049f086af238be4a1ac67-2cb2f7c67a6043b58c974b21949aab67-env/providers/Microsoft.Logic/workflows/8275a5df-c4d0-1f43-3bf3-a58dc2958863"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Fluxos lógicos",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "d03b879c-94db-49c5-a768-d83a3b363ee8": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {
+          "value": "6e27670f-4075-ec11-8943-000d3a88df92"
+        },
+        "workflowName": {
+          "value": "8275a5df-c4d0-1f43-3bf3-a58dc2958863"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "d03b879c-94db-49c5-a768-d83a3b363ee8"
+        },
+        "workflowEntityId": {
+          "value": "6e27670f-4075-ec11-8943-000d3a88df92"
+        },
+        "workflowName": {
+          "value": "8275a5df-c4d0-1f43-3bf3-a58dc2958863"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Fluxo-LogdeAcessos"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "d03b879c-94db-49c5-a768-d83a3b363ee8"
+    },
+    "dependents": [],
+    "id": "7e579f8a-3598-486b-89eb-890270eb3f14"
+  },
+  "c50491f5-3ecb-40b1-980a-8da639f83772": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1563/1.0.1563.2732/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://autoglass365.sharepoint.com/sites/app-estoque": {
+        "dataSources": {
+          "cmbCategorias": {
+            "tableName": "666ba55e-6e9b-4518-b65c-258782cc4f21"
+          },
+          "cmbFinalidade": {
+            "tableName": "fa26c873-4a9c-436e-ab49-f5ef0d0db895"
+          },
+          "listAuditoria": {
+            "tableName": "375c5356-c4d7-40dd-bcb7-a37722f4737b"
+          },
+          "listGerarAuditorias": {
+            "tableName": "5c30e6b6-c042-4673-9133-2c28012a3300"
+          },
+          "listMovimentacao": {
+            "tableName": "c64d8d8a-0b1a-422b-9bc5-fa89c97caed2"
+          },
+          "listProdutos": {
+            "tableName": "feeca766-6ed2-4db8-85b3-70551a45b689"
+          },
+          "listUsuarios": {
+            "tableName": "d6f294af-ce80-47fa-82b4-acf62f1477cd"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "listAuditoria",
+      "listProdutos",
+      "listUsuarios",
+      "cmbCategorias",
+      "listMovimentacao",
+      "cmbFinalidade",
+      "cmbEnderecos",
+      "listGerarAuditorias",
+      "listProdutosAuditados"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "c50491f5-3ecb-40b1-980a-8da639f83772"
+  },
+  "d03b879c-94db-49c5-a768-d83a3b363ee8": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1563/1.0.1563.2732/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://autoglass365.sharepoint.com/sites/app-estoque": {
+        "dataSources": {
+          "cmbEnderecos": {
+            "tableName": "f131edc9-4e5a-463e-a1f6-485e42c27b08"
+          },
+          "listProdutosAuditados": {
+            "tableName": "fce16db9-0213-4990-897c-03c4bf3ed7d1"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "cmbEnderecos",
+      "listProdutos",
+      "listAuditoria",
+      "listGerarAuditorias",
+      "listProdutosAuditados",
+      "listUsuarios"
+    ],
+    "dependencies": {},
+    "dependents": [
+      "7e579f8a-3598-486b-89eb-890270eb3f14"
+    ],
+    "id": "d03b879c-94db-49c5-a768-d83a3b363ee8"
+  },
+  "eec28f40-0a53-4d53-b6f6-fd94a7f7033b": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-16.brazilsouth.logic.azure.com:443/workflows/990b29c86a4e4dde997b778cd81623b1/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=O_Kz51SO64zqqTjiUh0sQCs-wc7LWSLdasmyWSeD3ck",
+      "workflowEndpoint": "/subscriptions/5072fcc3-8341-442e-9b98-4b441017c969/resourceGroups/00466ab9c56049f086af238be4a1ac67-2cb2f7c67a6043b58c974b21949aab67-env/providers/Microsoft.Logic/workflows/31ce51e6-530e-ec4e-622f-68f95fa47c41",
+      "workflowEntityId": "d3fd14ce-3d0f-ed11-b83e-000d3a892f48",
+      "workflowName": "31ce51e6-530e-ec4e-622f-68f95fa47c41",
+      "workflowPath": "/subscriptions/5072fcc3-8341-442e-9b98-4b441017c969/resourceGroups/00466ab9c56049f086af238be4a1ac67-2cb2f7c67a6043b58c974b21949aab67-env/providers/Microsoft.Logic/workflows/31ce51e6-530e-ec4e-622f-68f95fa47c41"
+    },
+    "connectionRef": {
+      "displayName": "Fluxos lógicos",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "548e3042-69a4-4f9b-91d8-3eb1d9de403e": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {
+          "value": "d3fd14ce-3d0f-ed11-b83e-000d3a892f48"
+        },
+        "workflowName": {
+          "value": "31ce51e6-530e-ec4e-622f-68f95fa47c41"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "548e3042-69a4-4f9b-91d8-3eb1d9de403e"
+        },
+        "workflowEntityId": {
+          "value": "d3fd14ce-3d0f-ed11-b83e-000d3a892f48"
+        },
+        "workflowName": {
+          "value": "31ce51e6-530e-ec4e-622f-68f95fa47c41"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "[Fluxo]Estoque-Manual-Valida-Auditoria"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "548e3042-69a4-4f9b-91d8-3eb1d9de403e"
+    },
+    "dependents": [],
+    "id": "eec28f40-0a53-4d53-b6f6-fd94a7f7033b"
+  }
+}

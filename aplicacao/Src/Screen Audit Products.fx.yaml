@@ -1,0 +1,692 @@
+"'Screen Audit Products' As screen":
+    Fill: =RGBA(255, 255, 255, 1)
+    LoadingSpinner: =LoadingSpinner.Data
+    OnVisible: |-
+        =ClearCollect(
+            colProdutosAuditados,
+            Filter(
+                listProdutosAuditados,
+                'Codigo Auditoria' = locCodigoAuditoria,
+                Local = locLocal,
+                Sequencia = glbContagem
+            )
+        );
+
+    Form2 As form:
+        DataSource: =listGerarAuditorias
+        Item: =LookUp(listGerarAuditorias,'Codigo Auditoria' = locCodigoAuditoria And Local = locLocal)
+        OnSuccess: |-
+            =ResetForm(Form2);
+            
+            Notify("Endereço finalizado com sucesso",NotificationType.Success,2000);
+            
+            Navigate('Screen Audit Select Address',ScreenTransition.UnCoverRight)
+        Visible: =false
+        Width: =640
+        Y: =40
+        ZIndex: =1
+
+        Status_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Status"
+            Default: =ThisItem.Status
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@listGerarAuditorias],DataSourceInfo.DisplayName,"Status")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@listGerarAuditorias], DataSourceInfo.MaxLength, "Status")
+            Required: =false
+            Update: =DataCardValue21.Text
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            DataCardKey43 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue21 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: ="Finalizado"
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey43.Y + DataCardKey43.Height + 5
+                ZIndex: =2
+
+            ErrorMessage42 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue21.Y + DataCardValue21.Height
+                ZIndex: =3
+
+            StarVisible43 As label:
+                Align: =Align.Center
+                Height: =DataCardKey43.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey43.Y
+                ZIndex: =4
+
+    Button5 As button:
+        BorderThickness: =0
+        Fill: =RGBA(54, 176, 75, 1)
+        Font: =Font.'Lato Black'
+        Height: =59
+        HoverFill: =ColorFade(Self.BorderColor, 20%)
+        OnSelect: =SubmitForm(Form1)
+        RadiusBottomLeft: =300
+        RadiusBottomRight: =300
+        RadiusTopLeft: =300
+        RadiusTopRight: =300
+        Size: =20
+        Text: ="SALVAR"
+        Width: =210
+        X: =384
+        Y: =720
+        ZIndex: =2
+
+    Form1 As form:
+        DataSource: =listProdutosAuditados
+        DefaultMode: =FormMode.New
+        Height: =451
+        OnSuccess: |-
+            =Notify("Alterações salvas com sucesso",NotificationType.Success,2000);
+            
+            ClearCollect(colProdutosAuditados,Filter(listProdutosAuditados,'Codigo Auditoria' = locCodigoAuditoria,Local = locLocal));
+            
+            ResetForm(Form1)
+        Width: =602
+        X: =24
+        Y: =260
+        ZIndex: =3
+
+        Local_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Local"
+            Default: =ThisItem.Local
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@listProdutosAuditados],DataSourceInfo.DisplayName,"Local")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@listProdutosAuditados], DataSourceInfo.MaxLength, "Local")
+            Required: =false
+            Update: =DataCardValue15.Text
+            Visible: =false
+            Width: =602
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey37 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue15 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =locLocal
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey37.Y + DataCardKey37.Height + 5
+                ZIndex: =2
+
+            ErrorMessage36 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue15.Y + DataCardValue15.Height
+                ZIndex: =3
+
+            StarVisible37 As label:
+                Align: =Align.Center
+                Height: =DataCardKey37.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey37.Y
+                ZIndex: =4
+
+        "'Codigo Auditoria_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="CodigoAuditoria"
+            Default: =ThisItem.'Codigo Auditoria'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@listProdutosAuditados],DataSourceInfo.DisplayName,"CodigoAuditoria")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@listProdutosAuditados], DataSourceInfo.MaxLength, "CodigoAuditoria")
+            Required: =false
+            Update: =DataCardValue16.Text
+            Visible: =false
+            Width: =602
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey38 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue16 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =locCodigoAuditoria
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey38.Y + DataCardKey38.Height + 5
+                ZIndex: =2
+
+            ErrorMessage37 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue16.Y + DataCardValue16.Height
+                ZIndex: =3
+
+            StarVisible38 As label:
+                Align: =Align.Center
+                Height: =DataCardKey38.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey38.Y
+                ZIndex: =4
+
+        Sequencia_DataCard1 As typedDataCard.numberEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Sequencia"
+            Default: =ThisItem.Sequencia
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@listProdutosAuditados],DataSourceInfo.DisplayName,"Sequencia")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue4.Text)
+            Visible: =false
+            Width: =602
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey26 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue4 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =glbContagem
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey26.Y + DataCardKey26.Height + 5
+                ZIndex: =2
+
+            ErrorMessage25 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue4.Y + DataCardValue4.Height
+                ZIndex: =3
+
+            StarVisible26 As label:
+                Align: =Align.Center
+                Height: =DataCardKey26.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey26.Y
+                ZIndex: =4
+
+        "'Codigo Produto_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="CodigoProduto"
+            Default: =ThisItem.'Codigo Produto'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@listProdutosAuditados],DataSourceInfo.DisplayName,"CodigoProduto")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@listProdutosAuditados], DataSourceInfo.MaxLength, "CodigoProduto")
+            Required: =true
+            Update: =DataCardValue5.Text
+            Width: =602
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+            DataCardKey27 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Lato Black'
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue5 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Font: =Font.Lato
+                Height: =70
+                HintText: ="Digite o código"
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =18
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey27.Y + DataCardKey27.Height + 5
+                ZIndex: =2
+
+            ErrorMessage26 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue5.Y + DataCardValue5.Height
+                ZIndex: =3
+
+            StarVisible27 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 0, 0, 1)
+                Height: =DataCardKey27.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey27.Y
+                ZIndex: =4
+
+        Descricao_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Descricao"
+            Default: =ThisItem.Descricao
+            DisplayMode: =Parent.DisplayMode.Disabled
+            DisplayName: =DataSourceInfo([@listProdutosAuditados],DataSourceInfo.DisplayName,"Descricao")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =161
+            MaxLength: =DataSourceInfo([@listProdutosAuditados], DataSourceInfo.MaxLength, "Descricao")
+            Required: =true
+            Update: =DataCardValue6.Text
+            Width: =602
+            X: =0
+            Y: =1
+            ZIndex: =4
+
+            DataCardKey28 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Lato Black'
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue6 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =LookUp(listProdutos,'Codigo Produto' = Value(DataCardValue5.Text)).Descricao
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Font: =Font.Lato
+                Height: =86
+                HintText: ="Descrição"
+                MaxLength: =Parent.MaxLength
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =18
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey28.Y + DataCardKey28.Height + 5
+                ZIndex: =2
+
+            ErrorMessage28 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue6.Y + DataCardValue6.Height
+                ZIndex: =3
+
+            StarVisible29 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 0, 0, 1)
+                Height: =DataCardKey28.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey28.Y
+                ZIndex: =4
+
+        Quantidade_DataCard1 As typedDataCard.numberEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Quantidade"
+            Default: =ThisItem.'Quantidade Fisica'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@listProdutosAuditados],DataSourceInfo.DisplayName,"Quantidade")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =Value(DataCardValue7.Text)
+            Width: =602
+            X: =0
+            Y: =2
+            ZIndex: =4
+
+            DataCardKey29 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Lato Black'
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue7 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Font: =Font.Lato
+                Format: =TextFormat.Number
+                Height: =70
+                HintText: ="Digite a quantidade"
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =18
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey29.Y + DataCardKey29.Height + 5
+                ZIndex: =2
+
+            ErrorMessage30 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue7.Y + DataCardValue7.Height
+                ZIndex: =3
+
+            StarVisible31 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 0, 0, 1)
+                Height: =DataCardKey29.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey29.Y
+                ZIndex: =4
+
+    Label9 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(221, 79, 14, 1)
+        Font: =Font.'Lato Black'
+        Height: =105
+        Italic: =true
+        Size: =30
+        Text: ="Auditando Endereço " & locLocal
+        Width: =394
+        X: =123
+        Y: =112
+        ZIndex: =4
+
+    ctnViewStockHeader_5 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(24, 56, 132, 1)
+        Height: =70
+        Width: =640
+        ZIndex: =5
+
+        lblHeaderTitle_5 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =25
+            Text: ="Auditar Produtos"
+            Width: =640
+            ZIndex: =1
+
+        Icon2_5 As icon.ArrowLeft:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =46
+            Icon: =Icon.ArrowLeft
+            OnSelect: =Navigate('Screen Audit Select Address',ScreenTransition.UnCoverRight)
+            X: =7
+            Y: =12
+            ZIndex: =3
+
+    Label12 As label:
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Italic: =true
+        Size: =21
+        Text: ="Total de Peças"
+        Width: =193
+        X: =168
+        Y: =851
+        ZIndex: =6
+
+    TextInput1 As text:
+        Align: =Align.Center
+        BorderThickness: =0
+        Default: =If(IsBlank(Sum(Filter(colProdutosAuditados,Sequencia = glbContagem),'Quantidade Fisica')), 0,Sum(Filter(colProdutosAuditados,Sequencia = glbContagem),'Quantidade Fisica'))
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(241, 244, 249, 1)
+        Font: =Font.Lato
+        Height: =69
+        PaddingLeft: =5
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Width: =111
+        X: =361
+        Y: =851
+        ZIndex: =7
+
+    Button7 As button:
+        BorderThickness: =0
+        Fill: =RGBA(184, 0, 0, 1)
+        Font: =Font.'Lato Black'
+        Height: =70
+        HoverFill: =ColorFade(Self.BorderColor, 20%)
+        OnSelect: |-
+            ='[Fluxo]Estoque-Manual-Valida-Auditoria'.Run(locCodigoAuditoria,locLocal,glbContagem);
+            
+            Notify("Endereço finalizado com sucesso",NotificationType.Success,3000);
+            
+            Navigate('Screen Audit Open',ScreenTransition.UnCoverRight)
+        RadiusBottomLeft: =300
+        RadiusBottomRight: =300
+        RadiusTopLeft: =300
+        RadiusTopRight: =300
+        Size: =22
+        Text: ="FINALIZAR ENDEREÇO"
+        Width: =557
+        X: =46
+        Y: =1044
+        ZIndex: =8
+
+    Icon1 As icon.Check:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =33
+        Icon: =Icon.Check
+        Width: =43
+        X: =494
+        Y: =1062
+        ZIndex: =9
+

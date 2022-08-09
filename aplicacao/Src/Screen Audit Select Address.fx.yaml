@@ -1,0 +1,135 @@
+"'Screen Audit Select Address' As screen":
+    LoadingSpinner: =LoadingSpinner.Data
+    OnVisible: =Refresh(listGerarAuditorias)
+
+    ctnViewStockHeader_4 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(24, 56, 132, 1)
+        Height: =70
+        Width: =640
+        ZIndex: =1
+
+        lblHeaderTitle_4 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =25
+            Text: ="Selecionar Endereço"
+            Width: =640
+            ZIndex: =1
+
+        Icon2_4 As icon.ArrowLeft:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =46
+            Icon: =Icon.ArrowLeft
+            OnSelect: =Navigate('Screen Audit Open',ScreenTransition.UnCoverRight)
+            X: =7
+            Y: =12
+            ZIndex: =3
+
+    "Gallery1_1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        Height: =950
+        Items: |-
+            =Filter(
+                listGerarAuditorias,
+                'Codigo Auditoria' = locCodAuditoria,
+                Status = locStatus
+            )
+        Layout: =Layout.Vertical
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =97
+        Visible: =If(CountRows(Gallery1_1.AllItems) = 0,false, true)
+        Width: =587
+        X: =26
+        Y: =130
+        ZIndex: =2
+
+        Button4_1 As button:
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =82
+            HoverBorderColor: =ColorFade(Self.Fill, -15%)
+            HoverFill: =Self.Fill
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =1
+            RadiusBottomRight: =1
+            RadiusTopLeft: =1
+            RadiusTopRight: =1
+            Size: =24
+            Text: =""
+            Width: =574
+            X: =4
+            Y: =15
+            ZIndex: =1
+
+        Subtitle2_1 As label:
+            Font: =Font.'Lato Black'
+            Height: =34
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =25
+            Text: =ThisItem.Local
+            VerticalAlign: =VerticalAlign.Top
+            Width: =238
+            X: =43
+            Y: =39
+            ZIndex: =2
+
+        Button3_1 As button:
+            BorderThickness: =0
+            Fill: =RGBA(54, 176, 75, 1)
+            Font: =Font.'Lato Black'
+            Height: =34
+            HoverFill: =ColorFade(Self.BorderColor, 20%)
+            OnSelect: |-
+                =Select(Parent);
+                
+                Navigate('Screen Audit Products',ScreenTransition.CoverRight,
+                    {
+                        locLocal: ThisItem.Local, 
+                        locCodigoAuditoria: ThisItem.'Codigo Auditoria',
+                        locId: ThisItem.ID
+                    })
+            RadiusBottomLeft: =200
+            RadiusBottomRight: =200
+            RadiusTopLeft: =200
+            RadiusTopRight: =200
+            Size: =12
+            Text: ="AUDITAR"
+            Width: =136
+            X: =414
+            Y: =39
+            ZIndex: =3
+
+    Label7_2 As label:
+        Font: =Font.Lato
+        Height: =37
+        Italic: =true
+        Size: =15
+        Text: |-
+            ="N° de Endereços: " & CountRows(Gallery1_1.AllItems)
+        Visible: =If(CountRows(Gallery1_1.AllItems) = 0,false, true)
+        Width: =257
+        X: =26
+        Y: =93
+        ZIndex: =3
+
+    Label14 As label:
+        Align: =Align.Center
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =116
+        Italic: =true
+        Size: =26
+        Text: ="Não existem endereços a contar no momento"
+        Visible: =If(CountRows(Gallery1_1.AllItems) > 0,false, true)
+        Width: =640
+        Y: =567
+        ZIndex: =4
+

@@ -1,0 +1,1044 @@
+"'Screen Register Product' As screen":
+    LoadingSpinner: =LoadingSpinner.Controls
+    OnVisible: =SetFocus(FieldCreateCodProduto)
+
+    ctnRegisterProductContent As groupContainer.manualLayoutContainer:
+        Height: =1066
+        Width: =640
+        Y: =70
+        ZIndex: =2
+
+        formCreateProduto As form:
+            AcceptsFocus: =false
+            DataSource: =listProdutos
+            DefaultMode: =FormMode.New
+            Height: =909
+            OnFailure: |-
+                =UpdateContext({locCadProdutoShowDialogFailed: true, locCadProdutoShowDialog: true})
+            OnSuccess: |
+                =ResetForm(formCreateProduto);
+                
+                Refresh(listProdutos);
+                
+                ClearCollect(collectionProdutos, listProdutos);
+                
+                UpdateContext({locCadProdutoShowDialogConfirm: true, locCadProdutoShowDialog: true})
+            Width: =625
+            X: =15
+            Y: =39
+            ZIndex: =3
+
+            cardLocal As typedDataCard.comboBoxEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Local"
+                Default: =ThisItem.Local
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: ="Local"
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =true
+                Update: =FieldCreateLocal.Selected
+                Width: =625
+                X: =0
+                Y: =2
+                ZIndex: =1
+
+                DataCardKey11 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(128, 128, 128, 1)
+                    Font: =Font.'Open Sans Condensed'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =48
+                    Size: =20
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                FieldCreateLocal As combobox:
+                    BorderColor: =If(IsBlank(Parent.Error), Color.Gray, Color.Red)
+                    BorderThickness: =1
+                    DefaultSelectedItems: =Parent.Default
+                    DisplayFields: =["Value"]
+                    DisplayMode: =Parent.DisplayMode
+                    Font: =Font.'Open Sans Condensed'
+                    Height: =70
+                    Items: =Choices([@listProdutos].Local)
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    SearchFields: =["Value"]
+                    SearchItems: =Choices(listProdutos.Local,FieldCreateLocal.SearchText)
+                    SelectMultiple: =false
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey11.Y + DataCardKey11.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage11 As label:
+                    AutoHeight: =true
+                    Font: =Font.'Open Sans Condensed'
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =FieldCreateLocal.Y + FieldCreateLocal.Height
+                    ZIndex: =3
+
+                StarVisible11 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
+                    Height: =DataCardKey11.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey11.Y
+                    ZIndex: =4
+
+            cardObservacoes As typedDataCard.textualMultiLineEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Observa_x00e7__x00f5_es"
+                Default: =ThisItem.Observações
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: ="Observações"
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =DataCardValue12.Text
+                Width: =625
+                X: =0
+                Y: =8
+                ZIndex: =1
+
+                DataCardKey34 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(128, 128, 128, 1)
+                    Font: =Font.'Open Sans Condensed'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =48
+                    Size: =20
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue12 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Color.Gray, Color.Red)
+                    BorderThickness: =1
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Font: =Font.'Open Sans Condensed'
+                    Height: =140
+                    HintText: ="Deixe aqui algumas observações sobre o produto..."
+                    HoverBorderColor: =RGBA(128, 128, 128, 1)
+                    Mode: =TextMode.MultiLine
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =3
+                    RadiusBottomRight: =3
+                    RadiusTopLeft: =3
+                    RadiusTopRight: =3
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey34.Y + DataCardKey34.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage29 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =24
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue12.Y + DataCardValue12.Height
+                    ZIndex: =3
+
+                StarVisible30 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey34.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey34.Y
+                    ZIndex: =4
+
+            cardCodProduto As typedDataCard.numberEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="CodigoProduto"
+                Default: =ThisItem.'Codigo Produto'
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: ="Codigo Produto"
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =true
+                Update: =Value(FieldCreateCodProduto.Text)
+                Width: =625
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+                DataCardKey2 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(128, 128, 128, 1)
+                    Font: =Font.'Open Sans Condensed'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =48
+                    Size: =20
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                FieldCreateCodProduto As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Color.Gray, Color.Red)
+                    BorderThickness: =1
+                    Default: |-
+                        =If(
+                            IsBlank(BarCodeCodProduto.Value),
+                            Parent.Default,
+                            BarCodeCodProduto.Value
+                        )
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Font: =Font.'Open Sans Condensed'
+                    Format: =TextFormat.Number
+                    Height: =70
+                    HintText: ="Informe o código do produto"
+                    HoverBorderColor: =RGBA(128, 128, 128, 1)
+                    OnChange: |-
+                        =If(
+                            !IsBlank(
+                                First(
+                                    Filter(
+                                        collectionProdutos,
+                                        'Codigo Produto' = Value(FieldCreateCodProduto.Text)
+                                    )
+                                ).'Codigo Produto'
+                            ),
+                            UpdateContext({locProdutoDuplicadoError: true}),
+                            UpdateContext({locProdutoDuplicadoError: false})
+                        )
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =3
+                    RadiusBottomRight: =3
+                    RadiusTopLeft: =3
+                    RadiusTopRight: =3
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                    ZIndex: =2
+
+                ProdutoVazioError As label:
+                    Font: =Font.'Open Sans Condensed'
+                    Height: =26
+                    LineHeight: =1.6
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =FieldCreateCodProduto.Y + FieldCreateCodProduto.Height
+                    ZIndex: =5
+
+                ProdutoDuplicadoError As label:
+                    AutoHeight: =true
+                    Font: =Font.'Open Sans Condensed'
+                    Height: =26
+                    LineHeight: =1.6
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: ="Este produto já existe no estoque"
+                    Visible: =locProdutoDuplicadoError
+                    Width: =564
+                    X: =30
+                    Y: =FieldCreateCodProduto.Y + FieldCreateCodProduto.Height
+                    ZIndex: =6
+
+                StarVisible2 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
+                    Height: =DataCardKey2.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey2.Y
+                    ZIndex: =7
+
+                grpBarcode As group:
+                    Height: =5
+                    Width: =5
+                    X: =40
+                    Y: =40
+                    ZIndex: =7
+
+                    imgBarCode As image:
+                        Fill: =RGBA(56, 96, 178, 1)
+                        Height: =53
+                        Image: ='tela-cadastrarproduto-imgBarCode'
+                        RadiusBottomLeft: =3
+                        RadiusBottomRight: =3
+                        RadiusTopLeft: =3
+                        RadiusTopRight: =3
+                        Width: =105
+                        X: =468
+                        Y: =70
+                        ZIndex: =3
+
+                    BarCodeCodProduto As barcodeScanner:
+                        BorderThickness: =0
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =53
+                        HoverBorderColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        RadiusBottomLeft: =3
+                        RadiusBottomRight: =3
+                        RadiusTopLeft: =3
+                        RadiusTopRight: =3
+                        Size: =24
+                        Text: =""
+                        Width: =106
+                        X: =468
+                        Y: =70
+                        ZIndex: =4
+
+            cardDescricao As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Descricao"
+                Default: =ThisItem.Descricao
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: ="Descricao"
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@listProdutos], DataSourceInfo.MaxLength, "Descricao")
+                Required: =true
+                Update: =Upper(FieldCreateDescricao.Text)
+                Width: =625
+                X: =0
+                Y: =1
+                ZIndex: =2
+
+                DataCardKey3 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(128, 128, 128, 1)
+                    Font: =Font.'Open Sans Condensed'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =48
+                    Size: =20
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                FieldCreateDescricao As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Color.Gray, Color.Red)
+                    BorderThickness: =1
+                    Default: =Upper(Parent.Default)
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Font: =Font.'Open Sans Condensed'
+                    Height: =70
+                    HintText: ="Informe o nome do produto"
+                    HoverBorderColor: =RGBA(128, 128, 128, 1)
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =3
+                    RadiusBottomRight: =3
+                    RadiusTopLeft: =3
+                    RadiusTopRight: =3
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage3 As label:
+                    AutoHeight: =true
+                    Font: =Font.'Open Sans Condensed'
+                    Height: =10
+                    LineHeight: =1.6
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =FieldCreateDescricao.Y + FieldCreateDescricao.Height
+                    ZIndex: =3
+
+                StarVisible3 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
+                    Height: =DataCardKey3.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey3.Y
+                    ZIndex: =4
+
+            cardCategoria As typedDataCard.comboBoxEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Categoria"
+                Default: =ThisItem.Categoria
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: ="Categoria"
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =true
+                Update: =FieldCreateCategoria.Selected
+                Width: =625
+                X: =0
+                Y: =3
+                ZIndex: =2
+
+                DataCardKey4 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(128, 128, 128, 1)
+                    Font: =Font.'Open Sans Condensed'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =48
+                    Size: =20
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                FieldCreateCategoria As combobox:
+                    BorderColor: =If(IsBlank(Parent.Error), Color.Gray, Color.Red)
+                    BorderThickness: =1
+                    DefaultSelectedItems: =Parent.Default
+                    DisplayFields: =["Value"]
+                    DisplayMode: =Parent.DisplayMode
+                    Font: =Font.'Open Sans Condensed'
+                    Height: =70
+                    Items: =Choices([@listProdutos].Categoria)
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    SearchFields: =["Value"]
+                    SearchItems: =Choices(listProdutos.Categoria,FieldCreateCategoria.SearchText)
+                    SelectMultiple: =false
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage4 As label:
+                    AutoHeight: =true
+                    Font: =Font.'Open Sans Condensed'
+                    Height: =10
+                    LineHeight: =1.6
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =FieldCreateCategoria.Y + FieldCreateCategoria.Height
+                    ZIndex: =3
+
+                StarVisible4 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
+                    Height: =DataCardKey4.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey4.Y
+                    ZIndex: =4
+
+            cardValidade As typedDataCard.dateEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Validade"
+                Default: =ThisItem.Validade
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: ="Validade"
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =FieldCreateValidade.SelectedDate
+                Width: =625
+                X: =0
+                Y: =4
+                ZIndex: =2
+
+                DataCardKey5 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(128, 128, 128, 1)
+                    Font: =Font.'Open Sans Condensed'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =48
+                    Size: =20
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                FieldCreateValidade As datepicker:
+                    BorderColor: =If(IsBlank(Parent.Error), Color.Gray, Color.Red)
+                    BorderThickness: =1
+                    DefaultDate: =Parent.Default
+                    DisplayMode: =Parent.DisplayMode
+                    EndYear: =Year(Today())+100
+                    Font: =Font.'Open Sans Condensed'
+                    Height: =70
+                    IsEditable: =true
+                    PaddingBottom: =0
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    Size: =24
+                    StartYear: =1899
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage5 As label:
+                    AutoHeight: =true
+                    Font: =Font.'Open Sans Condensed'
+                    Height: =10
+                    LineHeight: =1.6
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =FieldCreateValidade.Y + FieldCreateValidade.Height
+                    ZIndex: =3
+
+                StarVisible5 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
+                    Height: =DataCardKey5.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey5.Y
+                    ZIndex: =4
+
+            cardQuantidade As typedDataCard.numberEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Quantidade"
+                Default: =ThisItem.Quantidade
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: ="Quantidade"
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =If(IsBlank(Value(FieldCreateQuantidade.Text)),0,Value(FieldCreateQuantidade.Text))
+                Width: =625
+                X: =0
+                Y: =5
+                ZIndex: =2
+
+                DataCardKey7 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(128, 128, 128, 1)
+                    Font: =Font.'Open Sans Condensed'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =48
+                    Size: =20
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                FieldCreateQuantidade As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Color.Gray, Color.Red)
+                    BorderThickness: =1
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Font: =Font.'Open Sans Condensed'
+                    Format: =TextFormat.Number
+                    Height: =70
+                    HintText: ="Informe a quantidade (se não preencher será considerado 0)"
+                    HoverBorderColor: =RGBA(128, 128, 128, 1)
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =3
+                    RadiusBottomRight: =3
+                    RadiusTopLeft: =3
+                    RadiusTopRight: =3
+                    Size: =20
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage7 As label:
+                    AutoHeight: =true
+                    Font: =Font.'Open Sans Condensed'
+                    Height: =10
+                    LineHeight: =1.6
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =FieldCreateQuantidade.Y + FieldCreateQuantidade.Height
+                    ZIndex: =3
+
+                StarVisible7 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
+                    Height: =DataCardKey7.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey7.Y
+                    ZIndex: =4
+
+            cardValor As typedDataCard.numberEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Valor"
+                Default: =ThisItem.'Valor Unitário'
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: ="Valor"
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =true
+                Update: =Value(FieldCreateValor.Text)
+                Width: =625
+                X: =0
+                Y: =6
+                ZIndex: =2
+
+                DataCardKey8 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(128, 128, 128, 1)
+                    Font: =Font.'Open Sans Condensed'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =48
+                    Size: =20
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                FieldCreateValor As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Color.Gray, Color.Red)
+                    BorderThickness: =1
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Font: =Font.'Open Sans Condensed'
+                    Format: =TextFormat.Number
+                    Height: =70
+                    HintText: ="Informe o valor R$"
+                    HoverBorderColor: =RGBA(128, 128, 128, 1)
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =3
+                    RadiusBottomRight: =3
+                    RadiusTopLeft: =3
+                    RadiusTopRight: =3
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage8 As label:
+                    AutoHeight: =true
+                    Font: =Font.'Open Sans Condensed'
+                    Height: =10
+                    LineHeight: =1.6
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =FieldCreateValor.Y + FieldCreateValor.Height
+                    ZIndex: =3
+
+                StarVisible8 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
+                    Height: =DataCardKey8.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey8.Y
+                    ZIndex: =4
+
+            cardSaldoMinimo As typedDataCard.numberEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="SaldoMinimo"
+                Default: =ThisItem.'Saldo Minimo'
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: ="Saldo Minimo"
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =true
+                Update: =Value(FieldCreateSaldoMinimo.Text)
+                Width: =625
+                X: =0
+                Y: =7
+                ZIndex: =2
+
+                DataCardKey9 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(128, 128, 128, 1)
+                    Font: =Font.'Open Sans Condensed'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =48
+                    Size: =20
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                FieldCreateSaldoMinimo As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Color.Gray, Color.Red)
+                    BorderThickness: =1
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Font: =Font.'Open Sans Condensed'
+                    Format: =TextFormat.Number
+                    Height: =70
+                    HoverBorderColor: =RGBA(128, 128, 128, 1)
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =3
+                    RadiusBottomRight: =3
+                    RadiusTopLeft: =3
+                    RadiusTopRight: =3
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage9 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    LineHeight: =1.6
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =24
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =FieldCreateSaldoMinimo.Y + FieldCreateSaldoMinimo.Height
+                    ZIndex: =3
+
+                StarVisible9 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
+                    Height: =DataCardKey9.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey9.Y
+                    ZIndex: =4
+
+        lblCamposObrigatorios As label:
+            Color: =RGBA(255, 0, 0, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Semibold
+            Height: =39
+            PaddingLeft: =10
+            PaddingTop: =10
+            Size: =12
+            Text: ="Campos marcados com * são obrigatórios"
+            Width: =638
+            X: =1
+            ZIndex: =4
+
+        grpButtonCadProdutoActions As group:
+            Height: =5
+            Width: =5
+            X: =-108
+            Y: =-857
+            ZIndex: =4
+
+            btnCadProdutoCancelar As button:
+                BorderThickness: =0
+                Fill: =RGBA(192, 57, 43, 1)
+                Font: =Font.'Open Sans Condensed'
+                Height: =60
+                HoverFill: =ColorFade(Self.BorderColor, 20%)
+                OnSelect: |-
+                    =Back();
+                    
+                    ResetForm(formCreateProduto);
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =24
+                Text: ="Cancelar"
+                Width: =261
+                X: =35
+                Y: =980
+                ZIndex: =1
+
+            btnCadProdutoSalvar As button:
+                BorderThickness: =0
+                Fill: =RGBA(46, 204, 113, 1)
+                Font: =Font.'Open Sans Condensed'
+                Height: =60
+                HoverFill: =ColorFade(Self.BorderColor, 20%)
+                OnSelect: |-
+                    =If(
+                        locProdutoDuplicadoError = true,
+                        Notify("Este produto já existe no estoque", NotificationType.Information, 2000),
+                        SubmitForm(formCreateProduto)
+                    )
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =24
+                Text: ="Salvar"
+                Width: =261
+                X: =345
+                Y: =980
+                ZIndex: =2
+
+    ctnRegisterProductHeader As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(24, 56, 132, 1)
+        Height: =70
+        Width: =640
+        ZIndex: =3
+
+        lblHeaderCadProdutoTitle As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =25
+            Text: ="Cadastrar Produto"
+            Width: =640
+            ZIndex: =1
+
+        imgHeaderCadProdutoSeta As image:
+            Height: =70
+            Image: ='header-ImgSeta'
+            OnSelect: |-
+                =Back();
+                
+                ResetForm(formCreateProduto)
+            PaddingLeft: =10
+            Width: =98
+            ZIndex: =2
+
+    ctnRegistreProductShowDialog As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(128, 128, 128, 0.5)
+        Height: =1066
+        Visible: =locCadProdutoShowDialog
+        Width: =640
+        Y: =70
+        ZIndex: =4
+
+        grpCadProdutoShowDialogConfirm As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =-342
+            ZIndex: =5
+
+            rectDialogConfirm_1 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =253
+                Visible: |
+                    =locCadProdutoShowDialogConfirm
+                Width: =640
+                Y: =337
+                ZIndex: =1
+
+            imgDialogConfirm_1 As image:
+                Height: =138
+                Image: ='tela-geral-imgCheck'
+                Visible: |
+                    =locCadProdutoShowDialogConfirm
+                Width: =151
+                X: =244
+                Y: =337
+                ZIndex: =2
+
+            lblDialogConfirm_1 As label:
+                Align: =Align.Center
+                Font: =Font.'Open Sans Condensed'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =25
+                Text: ="Dados inseridos com sucesso!"
+                Visible: |
+                    =locCadProdutoShowDialogConfirm
+                Width: =640
+                Y: =480
+                ZIndex: =3
+
+            btnDialogConfirm_1 As button:
+                BorderThickness: =0
+                Fill: =RGBA(192, 57, 43, 1)
+                Font: =Font.'Open Sans Condensed'
+                Height: =45
+                HoverFill: =ColorFade(Self.BorderColor, 20%)
+                OnSelect: |-
+                    =UpdateContext({locCadProdutoShowDialogConfirm: false, locCadProdutoShowDialog: false});
+                    
+                    Navigate('Screen Home Page',ScreenTransition.UnCoverRight)
+                PressedFill: =ColorFade(Self.BorderColor, 20%)
+                RadiusBottomLeft: =3
+                RadiusBottomRight: =3
+                RadiusTopLeft: =3
+                RadiusTopRight: =3
+                Size: =22
+                Text: ="Fechar"
+                Visible: |
+                    =locCadProdutoShowDialogConfirm
+                Width: =226
+                X: =207
+                Y: =536
+                ZIndex: =8
+
+        grpCadProdutoShowDialogFailed As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =-342
+            ZIndex: =9
+
+            rectDialogFailed_1 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =253
+                Visible: =locCadProdutoShowDialogFailed
+                Width: =640
+                Y: =337
+                ZIndex: =4
+
+            imgDialogFailed_1 As image:
+                Height: =138
+                Image: ='tela-geral-imgFailed'
+                Visible: =locCadProdutoShowDialogFailed
+                Width: =151
+                X: =243
+                Y: =342
+                ZIndex: =5
+
+            lblDialogFailed_1 As label:
+                Align: =Align.Center
+                Font: =Font.'Open Sans Condensed'
+                FontWeight: =FontWeight.Semibold
+                Height: =46
+                Size: =25
+                Text: ="Erro ao inserir os dados, favor revisar!"
+                Visible: =locCadProdutoShowDialogFailed
+                Width: =640
+                Y: =480
+                ZIndex: =6
+
+            btnDialogFailed_1 As button:
+                Fill: =RGBA(192, 57, 43, 1)
+                Font: =Font.'Open Sans Condensed'
+                Height: =45
+                HoverFill: =ColorFade(Self.BorderColor, 20%)
+                OnSelect: |-
+                    =UpdateContext({locCadProdutoShowDialogFailed: false, locCadProdutoShowDialog: false})
+                PressedFill: =ColorFade(Self.BorderColor, 20%)
+                RadiusBottomLeft: =3
+                RadiusBottomRight: =3
+                RadiusTopLeft: =3
+                RadiusTopRight: =3
+                Size: =25
+                Text: ="Fechar"
+                Visible: =locCadProdutoShowDialogFailed
+                Width: =226
+                X: =207
+                Y: =536
+                ZIndex: =7
+

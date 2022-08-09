@@ -1,0 +1,316 @@
+"'Screen Audit Mount' As screen":
+    LoadingSpinner: =LoadingSpinner.Data
+    OnVisible: |-
+        =// Limpar campos de seleção
+        Reset(ComboBox1);
+        Reset(ComboBox2);
+        Reset(ComboBox3);
+        
+        UpdateContext({locCheckBoxProduto: false})
+
+    btnDefinir As button:
+        BorderThickness: =0
+        DisplayMode: |-
+            =If(
+                IsBlank(ComboBox1.SelectedItems) 
+                And 
+                IsBlank(ComboBox2.SelectedItems) 
+                And 
+                IsBlank(ComboBox3.SelectedItems), 
+                DisplayMode.Disabled, 
+                DisplayMode.Edit
+            )
+        Fill: =RGBA(0, 18, 107, 0.79)
+        Font: =Font.'Lato Black'
+        Height: =70
+        OnSelect: |
+            =ClearCollect(collectionAuditoriaEnderecos,
+                Filter
+                (
+                    collectionProdutos,
+                    (Local.Value in ComboBox1.SelectedItems || IsBlank(ComboBox1.Selected))
+                    &&
+                    (Categoria.Value in ComboBox2.SelectedItems || IsBlank(ComboBox2.Selected))
+                    &&
+                    (Descricao in ComboBox3.SelectedItems || IsBlank(ComboBox3.Selected))
+                )
+            );
+            
+            Navigate('Screen Audit Address',ScreenTransition.CoverRight)
+        RadiusBottomLeft: =200
+        RadiusBottomRight: =200
+        RadiusTopLeft: =200
+        RadiusTopRight: =200
+        Size: =24
+        Text: ="Aplicar"
+        Width: =392
+        X: =124
+        Y: =865
+        ZIndex: =1
+
+    Label3 As label:
+        Align: =Align.Center
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Italic: =true
+        Size: =22
+        Text: ="Selecione os filtros abaixo para montar os endereços."
+        Width: =560
+        X: =40
+        Y: =132
+        ZIndex: =2
+
+    Container1 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(24, 56, 132, 1)
+        BorderThickness: =2
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =501
+        Width: =568
+        X: =36
+        Y: =318
+        ZIndex: =3
+
+        Group4 As group:
+            Height: =5
+            Width: =5
+            X: =60
+            Y: =60
+            ZIndex: =8
+
+            lblCodigoProduto As label:
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Height: =50
+                Size: =20
+                Text: ="Código do Produto"
+                Width: =272
+                X: =40
+                Y: =334
+                ZIndex: =1
+
+            ComboBox3 As combobox:
+                DisplayFields: =["Descricao"]
+                DisplayMode: =If(locCheckBoxProduto,DisplayMode.Edit,DisplayMode.Disabled)
+                Font: =Font.Lato
+                Height: =65
+                Items: =listProdutos.Descricao
+                SearchFields: =["Descricao"]
+                SearchItems: =Search(listProdutos.Descricao,ComboBox3.SearchText,"Descricao")
+                Size: =18
+                Width: =442
+                X: =40
+                Y: =384
+                ZIndex: =2
+
+        Group2 As group:
+            Height: =5
+            Width: =5
+            X: =-49
+            Y: =-281
+            ZIndex: =8
+
+            lblLocal As label:
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Height: =49
+                Size: =20
+                Text: ="Local"
+                Width: =226
+                X: =40
+                Y: =185
+                ZIndex: =4
+
+            ComboBox1 As combobox:
+                DisplayFields: =["Result"]
+                DisplayMode: =If(locCheckBoxProduto,DisplayMode.Disabled,DisplayMode.Edit)
+                Font: =Font.Lato
+                Height: =65
+                InputTextPlaceholder: ="Localizar Itens"
+                Items: |-
+                    =Distinct(
+                        Filter(
+                            collectionProdutos,
+                            Categoria.Value in ComboBox2.SelectedItems.Categoria)
+                    ,Local.Value)
+                SearchFields: =["Result"]
+                SearchItems: |-
+                    =Search(Distinct(
+                        Filter(
+                            collectionProdutos,
+                            Categoria.Value in ComboBox2.SelectedItems.Categoria)
+                    ,Local.Value),ComboBox1.SearchText,"Result")
+                Size: =18
+                Width: =489
+                X: =40
+                Y: =234
+                ZIndex: =5
+
+        Group1 As group:
+            Height: =5
+            Width: =5
+            X: =-49
+            Y: =-281
+            ZIndex: =9
+
+            lblCaregoria As label:
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Height: =58
+                Size: =20
+                Text: ="Categoria"
+                Width: =286
+                X: =40
+                Y: =25
+                ZIndex: =3
+
+            ComboBox2 As combobox:
+                DisplayFields: =["Categoria"]
+                DisplayMode: =If(locCheckBoxProduto,DisplayMode.Disabled,DisplayMode.Edit)
+                Font: =Font.Lato
+                Height: =65
+                Items: =cmbCategorias.Categoria
+                OnChange: =Reset(ComboBox1)
+                SearchFields: =["Categoria"]
+                SearchItems: =Search(cmbCategorias.Categoria,ComboBox2.SearchText,"Categoria")
+                Size: =18
+                Width: =489
+                X: =40
+                Y: =83
+                ZIndex: =6
+
+    ctnViewStockHeader_1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(24, 56, 132, 1)
+        Height: =70
+        Width: =640
+        ZIndex: =4
+
+        lblHeaderTitle_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =25
+            Text: ="Montar Auditoria"
+            Width: =640
+            ZIndex: =1
+
+        Icon2_1 As icon.ArrowLeft:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =46
+            Icon: =Icon.ArrowLeft
+            OnSelect: |-
+                =Navigate('Screen Audit Manager',ScreenTransition.UnCoverRight);
+                
+                Reset(ComboBox1);
+                Reset(ComboBox2);
+                Reset(ComboBox3)
+            X: =7
+            Y: =12
+            ZIndex: =3
+
+        Button9 As button:
+            BorderColor: =White
+            BorderThickness: =1
+            Fill: =RGBA(24, 56, 132, 1)
+            Font: =Font.'Lato Black'
+            Height: =31
+            OnSelect: =Navigate('Screen Audit Report',ScreenTransition.CoverRight)
+            RadiusBottomLeft: =300
+            RadiusBottomRight: =300
+            RadiusTopLeft: =300
+            RadiusTopRight: =300
+            Text: ="Relatórios"
+            Width: =138
+            X: =489
+            Y: =19
+            ZIndex: =4
+
+    Checkbox3 As checkbox:
+        CheckboxSize: =40
+        Default: =locCheckBoxProduto
+        Font: =Font.Lato
+        Height: =42
+        Italic: =true
+        OnCheck: |-
+            =Reset(ComboBox1);
+            Reset(ComboBox2);
+            
+            UpdateContext({locCheckBoxProduto: true})
+        OnUncheck: |-
+            =UpdateContext({locCheckBoxProduto: false});
+            
+            Reset(ComboBox3)
+        Size: =16
+        Text: ="Código Produto"
+        Width: =195
+        X: =408
+        Y: =265
+        ZIndex: =5
+
+    Icon3 As icon.Reload:
+        Height: =26
+        Icon: =Icon.Reload
+        OnSelect: =Reset(ComboBox3)
+        Visible: =If(locCheckBoxProduto,true, false)
+        Width: =44
+        X: =530
+        Y: =645
+        ZIndex: =6
+
+    Container2 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(24, 56, 132, 1)
+        Height: =87
+        Width: =640
+        Y: =1049
+        ZIndex: =7
+
+        Label8_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Lato Black'
+            Height: =53
+            Size: =18
+            Text: ="Ocultar Estoque"
+            Width: =162
+            X: =385
+            Y: =19
+            ZIndex: =3
+
+        Label8_2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Lato Black'
+            Height: =53
+            Size: =18
+            Text: ="Listar Auditorias"
+            Width: =162
+            X: =115
+            Y: =19
+            ZIndex: =5
+
+        Icon5_2 As icon.ArrowRight:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =35
+            Icon: =Icon.DetailList
+            OnSelect: =Navigate('Screen Audit List',ScreenTransition.CoverRight)
+            Width: =50
+            X: =61
+            Y: =28
+            ZIndex: =6
+
+        Checkbox4 As checkbox:
+            CheckboxBorderColor: =RGBA(255, 255, 255, 1)
+            CheckboxSize: =50
+            Default: =If(First(Filter(listParametros,Descricao = "Ocultar valores do estoque")).Valor = "Sim",true,false)
+            Height: =59
+            OnCheck: |-
+                =Patch(listParametros,First(Filter(listParametros,Descricao = "Ocultar valores do estoque")),{Valor: "Sim"})
+            OnUncheck: |-
+                =Patch(listParametros,First(Filter(listParametros,Descricao = "Ocultar valores do estoque")),{Valor: "Não"})
+            Size: =21
+            Text: =""
+            Width: =53
+            X: =328
+            Y: =13
+            ZIndex: =7
+

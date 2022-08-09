@@ -1,0 +1,86 @@
+"'Screen Selected Move Stock' As screen":
+    LoadingSpinner: =LoadingSpinner.Controls
+
+    ctnSelectedStockContent As groupContainer.manualLayoutContainer:
+        Height: =1066
+        Width: =640
+        Y: =70
+        ZIndex: =1
+
+        btnSaidaEstoque As button:
+            BorderThickness: =0
+            Fill: =RGBA(54, 176, 75, 1)
+            Font: =Font.Lato
+            Height: =90
+            HoverFill: =ColorFade(Self.BorderColor, 20%)
+            OnSelect: |-
+                =Navigate(
+                    'Screen Stock Move',
+                    ScreenTransition.CoverRight,
+                    {
+                        rowProdutoSelecionado: produtoSelecionado,
+                        TipoMovimentacao: "ENTRADA"
+                    }
+                );
+            RadiusBottomLeft: =1
+            RadiusBottomRight: =1
+            RadiusTopLeft: =1
+            RadiusTopRight: =1
+            Size: =30
+            Text: ="Entrada"
+            Width: =360
+            X: =142
+            Y: =366
+            ZIndex: =1
+
+        btnEntradaEstoque As button:
+            BorderThickness: =0
+            Fill: =RGBA(184, 0, 0, 1)
+            Font: =Font.Lato
+            Height: =90
+            HoverFill: =ColorFade(Self.BorderColor, 20%)
+            OnSelect: |-
+                =Navigate(
+                    'Screen Stock Move',
+                    ScreenTransition.CoverRight,
+                    {
+                        rowProdutoSelecionado: produtoSelecionado,
+                        TipoMovimentacao: "SAIDA"
+                    }
+                );
+            RadiusBottomLeft: =1
+            RadiusBottomRight: =1
+            RadiusTopLeft: =1
+            RadiusTopRight: =1
+            Size: =30
+            Text: ="Saída"
+            Width: =360
+            X: =142
+            Y: =516
+            ZIndex: =2
+
+    ctnSelectedStockHeader As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(24, 56, 132, 1)
+        Height: =70
+        Width: =640
+        ZIndex: =2
+
+        lblSelectedStockHeaderTitle As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =25
+            Text: ="Selecionar Movimentação"
+            Width: =640
+            ZIndex: =1
+
+        imgSelectedStockHeaderVoltar As image:
+            Height: =70
+            Image: ='header-ImgSeta'
+            OnSelect: =Navigate('Screen Stock View',ScreenTransition.UnCoverRight);
+            PaddingLeft: =10
+            Width: =98
+            ZIndex: =2
+

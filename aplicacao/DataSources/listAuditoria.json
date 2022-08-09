@@ -1,0 +1,51 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-05-31T16:20:21.6010000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{Attachments}": "Anexos",
+      "{Attachments}@odata.type": "{Attachments} ({Attachments}@odata.type)",
+      "{FilenameWithExtension}": "Nome de arquivo com extensão",
+      "{FullPath}": "Caminho Completo",
+      "{HasAttachments}": "Tem anexos",
+      "{Identifier}": "Identificador",
+      "{IsFolder}": "ÉPasta",
+      "{Link}": "Link para o item",
+      "{ModerationComment}": "Comentários associados à aprovação de conteúdo deste item de lista",
+      "{ModerationStatus}": "Status de aprovação de conteúdo",
+      "{Name}": "Nome",
+      "{Path}": "Caminho da pasta",
+      "{Thumbnail}": "Miniatura",
+      "{TriggerWindowEndToken}": "Token de Fim da Janela de Acionamento",
+      "{TriggerWindowStartToken}": "Token de Início da Janela de Acionamento",
+      "{VersionNumber}": "Número da versão",
+      "Author": "Criado por",
+      "Author#Claims": "Criado por Claims",
+      "CodigoProduto": "Codigo Produto",
+      "ComplianceAssetId": "ID de Ativo de Conformidade",
+      "Created": "Criado",
+      "Descricao": "Descricao",
+      "Divergencia": "Divergencia",
+      "Editor": "Modificado por",
+      "Editor#Claims": "Modificado por Claims",
+      "ID": "IDAuditoria",
+      "Local": "Local",
+      "Modified": "Modificado",
+      "QuantidadeFisica": "Quantidade Fisica",
+      "QuantidadeSistema": "Quantidade Sistema",
+      "Status": "Status",
+      "StatusAuditoria": "Status Auditoria",
+      "Title": "Title"
+    },
+    "DatasetName": "https://autoglass365.sharepoint.com/sites/app-estoque",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "listAuditoria",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

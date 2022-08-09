@@ -1,0 +1,97 @@
+"'Screen Home' As screen":
+    BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
+    LoadingSpinner: =LoadingSpinner.Controls
+    OnVisible: =
+
+    ctnHomeFooter As groupContainer.manualLayoutContainer:
+        Height: =225
+        Width: =640
+        Y: =911
+        ZIndex: =2
+
+        lblTitleFooter As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(24, 56, 132, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =71
+            Size: =22
+            Text: ="Aplicações Corporativas ® 2021"
+            Width: =640
+            Y: =154
+            ZIndex: =1
+
+        imgGrupoAutoglass As image:
+            Height: =154
+            Image: ='tela-inicial-imgGrupoAutoglass'
+            PaddingLeft: =10
+            PaddingRight: =10
+            Width: =640
+            ZIndex: =2
+
+    ctnHomeContent As groupContainer.manualLayoutContainer:
+        Height: =554
+        Width: =640
+        Y: =296
+        ZIndex: =4
+
+        btnEntrar As button:
+            BorderColor: =White
+            BorderThickness: =1
+            DisplayMode: =If(IsBlank(LookUp(listUsuarios,'Nome Usuario'.Email = User().Email)),DisplayMode.Disabled,DisplayMode.Edit)
+            Fill: =RGBA(24, 56, 132, 1)
+            Font: =Font.Verdana
+            Height: =70
+            OnSelect: |-
+                =//'Fluxo-LogdeAcessos'.Run(User().Email);;
+                
+                Navigate('Screen Home Page',ScreenTransition.CoverRight)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =23
+            Text: ="ENTRAR"
+            Width: =280
+            X: =180
+            Y: =484
+            ZIndex: =2
+
+        imgEstoque As image:
+            Height: =448
+            Image: ='img-estoque'
+            Width: =634
+            X: =3
+            Y: =9
+            ZIndex: =3
+
+    ctnHomeHeader As groupContainer.manualLayoutContainer:
+        Height: =296
+        Width: =640
+        ZIndex: =5
+
+        lblTituloHeader As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(24, 56, 132, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Bold
+            Height: =234
+            Size: =40
+            Text: ="CONTROLE DE ESTOQUE"
+            Width: =640
+            Y: =62
+            ZIndex: =1
+
+        lblVersaoHeader As label:
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            PaddingRight: =10
+            Size: =21
+            Text: ="V1.2.7"
+            Width: =640
+            ZIndex: =2
+

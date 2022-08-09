@@ -1,0 +1,48 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-07-18T16:29:46.8100000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{Attachments}": "Anexos",
+      "{Attachments}@odata.type": "{Attachments} ({Attachments}@odata.type)",
+      "{FilenameWithExtension}": "Nome de arquivo com extensão",
+      "{FullPath}": "Caminho Completo",
+      "{HasAttachments}": "Tem anexos",
+      "{Identifier}": "Identificador",
+      "{IsFolder}": "ÉPasta",
+      "{Link}": "Link para o item",
+      "{ModerationComment}": "Comentários associados à aprovação de conteúdo deste item de lista",
+      "{ModerationStatus}": "Status de aprovação de conteúdo",
+      "{Name}": "Nome",
+      "{Path}": "Caminho da pasta",
+      "{Thumbnail}": "Miniatura",
+      "{TriggerWindowEndToken}": "Token de Fim da Janela de Acionamento",
+      "{TriggerWindowStartToken}": "Token de Início da Janela de Acionamento",
+      "{VersionNumber}": "Número da versão",
+      "Author": "Criado por",
+      "Author#Claims": "Criado por Claims",
+      "CodigoAuditoria": "Codigo Auditoria",
+      "ComplianceAssetId": "ID de Ativo de Conformidade",
+      "Created": "Criado",
+      "Editor": "Modificado por",
+      "Editor#Claims": "Modificado por Claims",
+      "Estoquista": "Estoquista",
+      "ID": "ID",
+      "IDEstoquista": "ID Estoquista",
+      "Local": "Local",
+      "Modified": "Modificado",
+      "Status": "Status",
+      "Title": "Title"
+    },
+    "DatasetName": "https://autoglass365.sharepoint.com/sites/app-estoque",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "listGerarAuditorias",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

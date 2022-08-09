@@ -1,0 +1,41 @@
+"'Screen Notifications' As screen":
+
+    Image1 As image:
+        Height: =212
+        Image: ='tela-geral-imgCheck'
+        Width: =245
+        X: =197
+        Y: =331
+        ZIndex: =1
+
+    Label5 As label:
+        Align: =Align.Center
+        Font: =Font.'Lato Black'
+        Height: =74
+        Size: =28
+        Text: ="Auditoria gerada com sucesso!"
+        Width: =640
+        Y: =566
+        ZIndex: =2
+
+    Timer1 As timer:
+        AutoStart: =true
+        Duration: =3000
+        Height: =70
+        OnTimerEnd: =Navigate('Screen Audit Mount',ScreenTransition.UnCoverRight)
+        Visible: =false
+        Width: =640
+        Y: =1066
+        ZIndex: =3
+
+    Label6 As label:
+        Align: =Align.Center
+        Font: =Font.Lato
+        Height: =56
+        Size: =21
+        Text: |-
+            ="Código: " &passCodAuditoria
+        Width: =640
+        Y: =640
+        ZIndex: =4
+

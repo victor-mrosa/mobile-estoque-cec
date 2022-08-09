@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "97f40dbf-f3a1-4a48-8d9f-c04b7c66596c",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "[Fluxo]Estoque-Manual-Valida-Auditoria",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

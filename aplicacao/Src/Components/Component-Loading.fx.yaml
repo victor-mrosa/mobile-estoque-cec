@@ -1,0 +1,19 @@
+"'Component-Loading' As CanvasComponent":
+    Fill: =RGBA(237, 237, 237, 1)
+    Height: =Max(App.Height, App.MinScreenHeight)
+    Width: =Max(App.Width, App.MinScreenWidth)
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Label2 As label:
+        Align: =Align.Center
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =91
+        Size: =40
+        Text: ="CARREGANDO...."
+        Width: =640
+        Y: =470
+        ZIndex: =1
+
