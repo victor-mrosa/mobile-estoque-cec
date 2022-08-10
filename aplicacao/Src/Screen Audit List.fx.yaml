@@ -29,9 +29,9 @@
             OnSelect: |-
                 =Navigate('Screen Audit Mount',ScreenTransition.UnCoverRight);
                 
-                Reset(ComboBox1);
-                Reset(ComboBox2);
-                Reset(ComboBox3)
+                Reset('cmb-AuditMount-Local');
+                Reset('cmb-AuditMount-Categoria');
+                Reset('cmb-AuditMount-CodigoProduto')
             X: =7
             Y: =12
             ZIndex: =3

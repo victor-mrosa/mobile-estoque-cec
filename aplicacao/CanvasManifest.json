@@ -110,11 +110,11 @@
     "Screen Stock Move",
     "Screen Register Product",
     "Screen Audit Manager",
-    "Screen Audit List",
     "Screen Audit Mount",
     "Screen Audit Address",
-    "Screen Audit Open",
     "Screen Audit Select Address",
+    "Screen Audit List",
+    "Screen Audit Open",
     "Screen Audit Products",
     "Screen Audit Report",
     "Screen Notifications"
