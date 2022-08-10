@@ -3,57 +3,43 @@
     OnVisible: |-
         =ClearCollect(colUsuarios,ForAll(Filter(listUsuarios,Perfil.Value = "Estoquista"),'Nome Usuario'));
         
-        UpdateContext({locLinhasAfetadas: CountRows(Gallery3.AllItems)})
+        UpdateContext({locLinhasAfetadas: CountRows('glr-AuditList-Estoquistas'.AllItems)})
 
-    ctnViewStockHeader_6 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(24, 56, 132, 1)
-        Height: =70
-        Width: =640
-        ZIndex: =1
-
-        lblHeaderTitle_6 As label:
-            Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            Font: =Font.'Open Sans Condensed'
-            FontWeight: =FontWeight.Semibold
-            Height: =70
-            Size: =25
-            Text: ="Auditorias"
-            Width: =640
-            ZIndex: =1
-
-        Icon2_6 As icon.ArrowLeft:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =46
-            Icon: =Icon.ArrowLeft
-            OnSelect: |-
-                =Navigate('Screen Audit Mount',ScreenTransition.UnCoverRight);
-                
-                Reset('cmb-AuditMount-Local');
-                Reset('cmb-AuditMount-Categoria');
-                Reset('cmb-AuditMount-CodigoProduto')
-            X: =7
-            Y: =12
-            ZIndex: =3
-
-    Container4 As groupContainer.manualLayoutContainer:
+    ctnAuditListFooter As groupContainer.manualLayoutContainer:
         BorderThickness: =1
         Height: =389
         Visible: =If(locLinhasAfetadas > 0, true, false)
         Width: =640
         Y: =747
-        ZIndex: =2
+        ZIndex: =1
 
-        Form3 As form:
-            DataSource: =listGerarAuditorias
-            Height: =150
-            Item: =LookUp(listGerarAuditorias,'Codigo Auditoria' = Gallery3.Selected.Result)
-            OnSuccess: =ResetForm(Form3)
-            Width: =640
-            Y: =78
+        "'btn-AuditList-Salvar' As button":
+            Fill: =RGBA(99, 139, 44, 1)
+            Font: =Font.'Lato Black'
+            Height: =56
+            HoverFill: =ColorFade(Self.BorderColor, 20%)
+            OnSelect: =SubmitForm('frm-AuditList-EditEstoquista')
+            RadiusBottomLeft: =300
+            RadiusBottomRight: =300
+            RadiusTopLeft: =300
+            RadiusTopRight: =300
+            Size: =24
+            Text: ="Salvar"
+            Width: =248
+            X: =360
+            Y: =228
             ZIndex: =1
 
-            Estoquista_DataCard3 As typedDataCard.textualEditCard:
+        "'frm-AuditList-EditEstoquista' As form":
+            DataSource: =listGerarAuditorias
+            Height: =150
+            Item: =LookUp(listGerarAuditorias,'Codigo Auditoria' = 'glr-AuditList-Estoquistas'.Selected.Result)
+            OnSuccess: =ResetForm('frm-AuditList-EditEstoquista')
+            Width: =640
+            Y: =78
+            ZIndex: =2
+
+            "'crd-Estoquista' As typedDataCard.textualEditCard":
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="Estoquista"
                 Default: =ThisItem.Estoquista
@@ -126,7 +112,7 @@
                     Y: =59
                     ZIndex: =5
 
-            "'ID Estoquista_DataCard1' As typedDataCard.textualEditCard":
+            "'crd-IdEstoquista' As typedDataCard.textualEditCard":
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="IDEstoquista"
                 Default: =ThisItem.'ID Estoquista'
@@ -200,42 +186,25 @@
                     Y: =DataCardKey41.Y
                     ZIndex: =4
 
-        Button6 As button:
-            Fill: =RGBA(99, 139, 44, 1)
-            Font: =Font.'Lato Black'
-            Height: =56
-            HoverFill: =ColorFade(Self.BorderColor, 20%)
-            OnSelect: =SubmitForm(Form3)
-            RadiusBottomLeft: =300
-            RadiusBottomRight: =300
-            RadiusTopLeft: =300
-            RadiusTopRight: =300
-            Size: =24
-            Text: ="Salvar"
-            Width: =248
-            X: =360
-            Y: =228
-            ZIndex: =2
-
-        Label8 As label:
+        "'lbl-AuditList-CodigoAuditoria' As label":
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(221, 79, 14, 1)
             Font: =Font.'Lato Black'
             Height: =66
             Size: =21
-            Text: =Gallery3.Selected.Result
+            Text: ='glr-AuditList-Estoquistas'.Selected.Result
             Width: =640
             ZIndex: =3
 
-    Container3 As groupContainer.manualLayoutContainer:
+    ctnAuditListContent As groupContainer.manualLayoutContainer:
         Height: =677
         Visible: =If(locLinhasAfetadas > 0, true, false)
         Width: =640
         Y: =70
-        ZIndex: =3
+        ZIndex: =2
 
-        "Gallery3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        "'glr-AuditList-Estoquistas' As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
             Height: =555
             Items: =Distinct(listGerarAuditorias,'Codigo Auditoria').Result
             Layout: =Layout.Vertical
@@ -323,7 +292,7 @@
                 Y: =25
                 ZIndex: =6
 
-        Label4 As label:
+        "'lbl-AuditList-Descricao' As label":
             Align: =Align.Center
             Font: =Font.'Lato Black'
             Height: =70
@@ -335,7 +304,38 @@
             Y: =20
             ZIndex: =2
 
-    Label10 As label:
+    ctnAuditListHeader As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(24, 56, 132, 1)
+        Height: =70
+        Width: =640
+        ZIndex: =3
+
+        "'lbl-AuditList-Auditorias' As label":
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =25
+            Text: ="Auditorias"
+            Width: =640
+            ZIndex: =1
+
+        "'ico-AuditList-Voltar' As icon.ArrowLeft":
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =46
+            Icon: =Icon.ArrowLeft
+            OnSelect: |-
+                =Navigate('Screen Audit Mount',ScreenTransition.UnCoverRight);
+                
+                Reset('cmb-AuditMount-Local');
+                Reset('cmb-AuditMount-Categoria');
+                Reset('cmb-AuditMount-CodigoProduto')
+            X: =7
+            Y: =12
+            ZIndex: =3
+
+    "'lbl-AuditList-Informacao' As label":
         Align: =Align.Center
         Font: =Font.'Lato Black'
         Height: =74

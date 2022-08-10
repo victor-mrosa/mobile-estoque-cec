@@ -2,13 +2,127 @@
     LoadingSpinner: =LoadingSpinner.Data
     OnVisible: =Refresh(listGerarAuditorias)
 
-    ctnViewStockHeader_3 As groupContainer.manualLayoutContainer:
+    ctnAuditOpenContent As groupContainer.manualLayoutContainer:
+        Height: =1066
+        Width: =640
+        Y: =70
+        ZIndex: =4
+
+        "'glr-AuditOpen-Auditorias' As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+            Height: =959
+            Items: |-
+                =Distinct(
+                    Filter(
+                        listGerarAuditorias,
+                        'ID Estoquista' = User().Email,
+                        Status = locStatus
+                    ),'Codigo Auditoria'
+                ).Result
+            Layout: =Layout.Vertical
+            ShowNavigation: =true
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =97
+            Visible: =If(CountRows('glr-AuditOpen-Auditorias'.AllItems) = 0,false, true)
+            Width: =587
+            X: =26
+            Y: =77
+            ZIndex: =1
+
+            "'btn-Auditorias-Layout' As button":
+                BorderThickness: =1
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =82
+                HoverBorderColor: =ColorFade(Self.Fill, -15%)
+                HoverFill: =Self.Fill
+                OnSelect: =Select(Parent)
+                RadiusBottomLeft: =1
+                RadiusBottomRight: =1
+                RadiusTopLeft: =1
+                RadiusTopRight: =1
+                Size: =24
+                Text: =""
+                Width: =574
+                X: =4
+                Y: =15
+                ZIndex: =1
+
+            "'lbl-Auditorias-CodigoAuditoria' As label":
+                Font: =Font.'Lato Black'
+                Height: =34
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =ThisItem.Result
+                VerticalAlign: =VerticalAlign.Top
+                Width: =178
+                X: =43
+                Y: =39
+                ZIndex: =2
+
+            "'btn-Auditorias-Iniciar' As button":
+                BorderThickness: =0
+                Fill: =RGBA(54, 176, 75, 1)
+                Font: =Font.'Lato Black'
+                Height: =34
+                HoverFill: =ColorFade(Self.BorderColor, 20%)
+                OnSelect: |-
+                    =Select(Parent);
+                    Navigate(
+                        'Screen Audit Select Address',
+                        ScreenTransition.CoverRight,
+                        {
+                            locCodAuditoria: 'glr-AuditOpen-Auditorias'.Selected.Result,
+                            locStatus: locStatus
+                        }
+                    )
+                RadiusBottomLeft: =200
+                RadiusBottomRight: =200
+                RadiusTopLeft: =200
+                RadiusTopRight: =200
+                Size: =12
+                Text: ="INICIAR"
+                Width: =136
+                X: =414
+                Y: =39
+                ZIndex: =3
+
+        "'lbl-AuditOpen-Informacao' As label":
+            Align: =Align.Center
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Bold
+            Height: =116
+            Italic: =true
+            Size: =26
+            Text: ="Nenhuma auditoria em aberto"
+            Visible: =If(CountRows('glr-AuditOpen-Auditorias'.AllItems) > 0,false, true)
+            Width: =640
+            Y: =530
+            ZIndex: =2
+
+        "'lbl-AuditOpen-NAuditorias' As label":
+            Font: =Font.Lato
+            Height: =37
+            Italic: =true
+            Size: =15
+            Text: |-
+                ="N° de Auditorias: " & CountRows('glr-AuditOpen-Auditorias'.AllItems)
+            Visible: =If(CountRows('glr-AuditOpen-Auditorias'.AllItems) = 0,false, true)
+            Width: =257
+            X: =26
+            Y: =40
+            ZIndex: =3
+
+    ctnAuditOpenHeader As groupContainer.manualLayoutContainer:
         Fill: =RGBA(24, 56, 132, 1)
         Height: =70
         Width: =640
-        ZIndex: =1
+        ZIndex: =5
 
-        lblHeaderTitle_3 As label:
+        "'lbl-AuditOpen-AuditoriasAbertas' As label":
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.'Open Sans Condensed'
@@ -19,7 +133,7 @@
             Width: =640
             ZIndex: =1
 
-        Icon2_3 As icon.ArrowLeft:
+        "'ico-AuditOpen-Voltar' As icon.ArrowLeft":
             Color: =RGBA(255, 255, 255, 1)
             Height: =46
             Icon: =Icon.ArrowLeft
@@ -27,112 +141,4 @@
             X: =7
             Y: =12
             ZIndex: =3
-
-    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
-        Height: =959
-        Items: |-
-            =Distinct(
-                Filter(
-                    listGerarAuditorias,
-                    'ID Estoquista' = User().Email,
-                    Status = locStatus
-                ),'Codigo Auditoria'
-            ).Result
-        Layout: =Layout.Vertical
-        ShowNavigation: =true
-        ShowScrollbar: =false
-        TemplatePadding: =0
-        TemplateSize: =97
-        Visible: =If(CountRows(Gallery1.AllItems) = 0,false, true)
-        Width: =587
-        X: =26
-        Y: =134
-        ZIndex: =1
-
-        Button4 As button:
-            BorderThickness: =1
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =82
-            HoverBorderColor: =ColorFade(Self.Fill, -15%)
-            HoverFill: =Self.Fill
-            OnSelect: =Select(Parent)
-            RadiusBottomLeft: =1
-            RadiusBottomRight: =1
-            RadiusTopLeft: =1
-            RadiusTopRight: =1
-            Size: =24
-            Text: =""
-            Width: =574
-            X: =4
-            Y: =15
-            ZIndex: =1
-
-        Subtitle2 As label:
-            Font: =Font.'Lato Black'
-            Height: =34
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =25
-            Text: =ThisItem.Result
-            VerticalAlign: =VerticalAlign.Top
-            Width: =178
-            X: =43
-            Y: =39
-            ZIndex: =2
-
-        Button3 As button:
-            BorderThickness: =0
-            Fill: =RGBA(54, 176, 75, 1)
-            Font: =Font.'Lato Black'
-            Height: =34
-            HoverFill: =ColorFade(Self.BorderColor, 20%)
-            OnSelect: |-
-                =Select(Parent);
-                Navigate(
-                    'Screen Audit Select Address',
-                    ScreenTransition.CoverRight,
-                    {
-                        locCodAuditoria: Gallery1.Selected.Result,
-                        locStatus: locStatus
-                    }
-                )
-            RadiusBottomLeft: =200
-            RadiusBottomRight: =200
-            RadiusTopLeft: =200
-            RadiusTopRight: =200
-            Size: =12
-            Text: ="INICIAR"
-            Width: =136
-            X: =414
-            Y: =39
-            ZIndex: =3
-
-    Label7_1 As label:
-        Font: =Font.Lato
-        Height: =37
-        Italic: =true
-        Size: =15
-        Text: |-
-            ="N° de Auditorias: " & CountRows(Gallery1.AllItems)
-        Visible: =If(CountRows(Gallery1.AllItems) = 0,false, true)
-        Width: =257
-        X: =26
-        Y: =97
-        ZIndex: =2
-
-    Label14_1 As label:
-        Align: =Align.Center
-        Font: =Font.'Lato Black'
-        FontWeight: =FontWeight.Bold
-        Height: =116
-        Italic: =true
-        Size: =26
-        Text: ="Nenhuma auditoria em aberto"
-        Visible: =If(CountRows(Gallery1.AllItems) > 0,false, true)
-        Width: =640
-        Y: =587
-        ZIndex: =3
 

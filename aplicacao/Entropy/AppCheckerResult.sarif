@@ -3554,19 +3554,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnViewStockHeader_6.Icon2_6.AccessibleLabel"
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnViewStockHeader_6.Icon2_6.AccessibleLabel",
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen Audit List",
-                "type": "'Screen Audit List'.ctnViewStockHeader_6.Icon2_6"
+                "type": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'"
               }
             }
           ],
@@ -3584,19 +3584,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnViewStockHeader_6.Icon2_6.TabIndex"
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnViewStockHeader_6.Icon2_6.TabIndex",
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Screen Audit List",
-                "type": "'Screen Audit List'.ctnViewStockHeader_6.Icon2_6"
+                "type": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'"
               }
             }
           ],
@@ -3614,19 +3614,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit List'.Container3.Gallery3.AccessibleLabel"
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit List'.Container3.Gallery3.AccessibleLabel",
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen Audit List",
-                "type": "'Screen Audit List'.Container3.Gallery3"
+                "type": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'"
               }
             }
           ],
@@ -3644,19 +3644,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit List'.Container3.Gallery3.TabIndex"
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit List'.Container3.Gallery3.TabIndex",
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Screen Audit List",
-                "type": "'Screen Audit List'.Container3.Gallery3"
+                "type": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'"
               }
             }
           ],
@@ -3674,19 +3674,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit List'.Container4.Form3.Estoquista_DataCard3.ComboBox5.AccessibleLabel"
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-Estoquista'.ComboBox5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit List'.Container4.Form3.Estoquista_DataCard3.ComboBox5.AccessibleLabel",
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-Estoquista'.ComboBox5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen Audit List",
-                "type": "'Screen Audit List'.Container4.Form3.Estoquista_DataCard3.ComboBox5"
+                "type": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-Estoquista'.ComboBox5"
               }
             }
           ],
@@ -3704,19 +3704,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit List'.Container4.Form3.'ID Estoquista_DataCard1'.DataCardValue19.AccessibleLabel"
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-IdEstoquista'.DataCardValue19.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit List'.Container4.Form3.'ID Estoquista_DataCard1'.DataCardValue19.AccessibleLabel",
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-IdEstoquista'.DataCardValue19.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen Audit List",
-                "type": "'Screen Audit List'.Container4.Form3.'ID Estoquista_DataCard1'.DataCardValue19"
+                "type": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-IdEstoquista'.DataCardValue19"
               }
             }
           ],
@@ -3794,19 +3794,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.Icon2_1.AccessibleLabel"
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.Icon2_1.AccessibleLabel",
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen Audit Mount",
-                "type": "'Screen Audit Mount'.ctnAuditMountHeader.Icon2_1"
+                "type": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'"
               }
             }
           ],
@@ -3824,19 +3824,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.Icon2_1.TabIndex"
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.Icon2_1.TabIndex",
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Screen Audit Mount",
-                "type": "'Screen Audit Mount'.ctnAuditMountHeader.Icon2_1"
+                "type": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'"
               }
             }
           ],
@@ -4064,19 +4064,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Open'.ctnViewStockHeader_3.Icon2_3.AccessibleLabel"
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit Open'.ctnViewStockHeader_3.Icon2_3.AccessibleLabel",
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen Audit Open",
-                "type": "'Screen Audit Open'.ctnViewStockHeader_3.Icon2_3"
+                "type": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'"
               }
             }
           ],
@@ -4094,19 +4094,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Open'.ctnViewStockHeader_3.Icon2_3.TabIndex"
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit Open'.ctnViewStockHeader_3.Icon2_3.TabIndex",
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Screen Audit Open",
-                "type": "'Screen Audit Open'.ctnViewStockHeader_3.Icon2_3"
+                "type": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'"
               }
             }
           ],
@@ -4124,19 +4124,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Open'.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit Open'.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Audit Open",
+                "type": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen Audit Open",
-                "type": "'Screen Audit Open'.Gallery1"
+                "type": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'"
               }
             }
           ],
@@ -4148,36 +4178,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Open'.Gallery1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Open'.Gallery1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Audit Open",
-                "type": "'Screen Audit Open'.Gallery1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
         },
         {
           "locations": [
@@ -4484,19 +4484,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Select Address'.ctnViewStockHeader_4.Icon2_4.AccessibleLabel"
+                  "fullyQualifiedName": "'Screen Audit Select Address'.ctnAuditSelectAddressHeader.'ico-AuditSelectAddress-Voltar'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit Select Address'.ctnViewStockHeader_4.Icon2_4.AccessibleLabel",
+                  "fullyQualifiedName": "'Screen Audit Select Address'.ctnAuditSelectAddressHeader.'ico-AuditSelectAddress-Voltar'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen Audit Select Address",
-                "type": "'Screen Audit Select Address'.ctnViewStockHeader_4.Icon2_4"
+                "type": "'Screen Audit Select Address'.ctnAuditSelectAddressHeader.'ico-AuditSelectAddress-Voltar'"
               }
             }
           ],
@@ -4514,19 +4514,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Select Address'.ctnViewStockHeader_4.Icon2_4.TabIndex"
+                  "fullyQualifiedName": "'Screen Audit Select Address'.ctnAuditSelectAddressHeader.'ico-AuditSelectAddress-Voltar'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit Select Address'.ctnViewStockHeader_4.Icon2_4.TabIndex",
+                  "fullyQualifiedName": "'Screen Audit Select Address'.ctnAuditSelectAddressHeader.'ico-AuditSelectAddress-Voltar'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Screen Audit Select Address",
-                "type": "'Screen Audit Select Address'.ctnViewStockHeader_4.Icon2_4"
+                "type": "'Screen Audit Select Address'.ctnAuditSelectAddressHeader.'ico-AuditSelectAddress-Voltar'"
               }
             }
           ],
@@ -4544,49 +4544,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Select Address'.Gallery1_1.AccessibleLabel"
+                  "fullyQualifiedName": "'Screen Audit Select Address'.ctnAuditSelectAddressContent.'glr-AuditSelectAddress-Enderecos'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit Select Address'.Gallery1_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit Select Address",
-                "type": "'Screen Audit Select Address'.Gallery1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Select Address'.Gallery1_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Select Address'.Gallery1_1.TabIndex",
+                  "fullyQualifiedName": "'Screen Audit Select Address'.ctnAuditSelectAddressContent.'glr-AuditSelectAddress-Enderecos'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Screen Audit Select Address",
-                "type": "'Screen Audit Select Address'.Gallery1_1"
+                "type": "'Screen Audit Select Address'.ctnAuditSelectAddressContent.'glr-AuditSelectAddress-Enderecos'"
               }
             }
           ],
@@ -4604,19 +4574,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Report'.ctnViewStockHeader_7.Icon2_7.AccessibleLabel"
+                  "fullyQualifiedName": "'Screen Audit Select Address'.ctnAuditSelectAddressContent.'glr-AuditSelectAddress-Enderecos'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit Report'.ctnViewStockHeader_7.Icon2_7.AccessibleLabel",
+                  "fullyQualifiedName": "'Screen Audit Select Address'.ctnAuditSelectAddressContent.'glr-AuditSelectAddress-Enderecos'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen Audit Report",
-                "type": "'Screen Audit Report'.ctnViewStockHeader_7.Icon2_7"
+                "module": "Screen Audit Select Address",
+                "type": "'Screen Audit Select Address'.ctnAuditSelectAddressContent.'glr-AuditSelectAddress-Enderecos'"
               }
             }
           ],
@@ -4634,19 +4604,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Report'.ctnViewStockHeader_7.Icon2_7.TabIndex"
+                  "fullyQualifiedName": "'Screen Audit Report'.ctnAuditReportHeader.'ico-AuditReport-Voltar'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit Report'.ctnViewStockHeader_7.Icon2_7.TabIndex",
+                  "fullyQualifiedName": "'Screen Audit Report'.ctnAuditReportHeader.'ico-AuditReport-Voltar'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit Report",
+                "type": "'Screen Audit Report'.ctnAuditReportHeader.'ico-AuditReport-Voltar'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Report'.ctnAuditReportHeader.'ico-AuditReport-Voltar'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Report'.ctnAuditReportHeader.'ico-AuditReport-Voltar'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Screen Audit Report",
-                "type": "'Screen Audit Report'.ctnViewStockHeader_7.Icon2_7"
+                "type": "'Screen Audit Report'.ctnAuditReportHeader.'ico-AuditReport-Voltar'"
               }
             }
           ],
@@ -4664,19 +4664,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Report'.TextInput3.AccessibleLabel"
+                  "fullyQualifiedName": "'Screen Audit Report'.ctnAuditReportContent.'glr-AuditReport-Relatorios'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit Report'.TextInput3.AccessibleLabel",
+                  "fullyQualifiedName": "'Screen Audit Report'.ctnAuditReportContent.'glr-AuditReport-Relatorios'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen Audit Report",
-                "type": "'Screen Audit Report'.TextInput3"
+                "type": "'Screen Audit Report'.ctnAuditReportContent.'glr-AuditReport-Relatorios'"
               }
             }
           ],
@@ -4694,19 +4694,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Report'.Gallery5.AccessibleLabel"
+                  "fullyQualifiedName": "'Screen Audit Report'.ctnAuditReportContent.'ipt-AuditReport-CodigoAuditoria'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit Report'.Gallery5.AccessibleLabel",
+                  "fullyQualifiedName": "'Screen Audit Report'.ctnAuditReportContent.'ipt-AuditReport-CodigoAuditoria'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen Audit Report",
-                "type": "'Screen Audit Report'.Gallery5"
+                "type": "'Screen Audit Report'.ctnAuditReportContent.'ipt-AuditReport-CodigoAuditoria'"
               }
             }
           ],
@@ -4724,19 +4724,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Report'.Gallery5.TabIndex"
+                  "fullyQualifiedName": "'Screen Audit Report'.ctnAuditReportContent.'glr-AuditReport-Relatorios'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Screen Audit Report'.Gallery5.TabIndex",
+                  "fullyQualifiedName": "'Screen Audit Report'.ctnAuditReportContent.'glr-AuditReport-Relatorios'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Screen Audit Report",
-                "type": "'Screen Audit Report'.Gallery5"
+                "type": "'Screen Audit Report'.ctnAuditReportContent.'glr-AuditReport-Relatorios'"
               }
             }
           ],
