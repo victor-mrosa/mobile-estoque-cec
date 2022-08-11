@@ -36,6 +36,7 @@
             ZIndex: =9
 
             imgCadProduto As image:
+                DisplayMode: =
                 Height: =60
                 Image: ='tela-inicial-imgCadastrarProduto'
                 OnSelect: =
@@ -46,6 +47,7 @@
 
             lblCadProdutoSubtitle As label:
                 Color: =RGBA(128, 128, 128, 1)
+                DisplayMode: =
                 Font: =Font.'Lato Light'
                 Height: =51
                 OnSelect: =""
@@ -64,6 +66,7 @@
                 ZIndex: =13
 
             lblCadProdutoTitle As label:
+                DisplayMode: =
                 Font: =Font.'Lato Black'
                 Height: =Self.Size * 1.8
                 OnSelect: =""
@@ -80,6 +83,7 @@
 
             btnCadProduto As button:
                 BorderColor: =RGBA(231, 231, 231, 1)
+                DisplayMode: =
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =120
                 HoverFill: =RGBA(231, 231, 231, 0.15)
@@ -105,6 +109,12 @@
             ZIndex: =13
 
             imgAuditoria As image:
+                DisplayMode: |-
+                    =If(
+                        UserPerfil = "Estoquista",
+                        DisplayMode.Disabled,
+                        DisplayMode.Edit
+                    )
                 Height: =60
                 Image: ='tela-inicial-imgAuditoria'
                 OnSelect: =
@@ -115,6 +125,12 @@
 
             lblAuditoriaSubtitle As label:
                 Color: =RGBA(128, 128, 128, 1)
+                DisplayMode: |-
+                    =If(
+                        UserPerfil = "Estoquista",
+                        DisplayMode.Disabled,
+                        DisplayMode.Edit
+                    )
                 Font: =Font.'Lato Light'
                 Height: =51
                 OnSelect: =""
@@ -133,6 +149,12 @@
                 ZIndex: =7
 
             lblAuditoriaTitle As label:
+                DisplayMode: |-
+                    =If(
+                        UserPerfil = "Estoquista",
+                        DisplayMode.Disabled,
+                        DisplayMode.Edit
+                    )
                 Font: =Font.'Lato Black'
                 Height: =Self.Size * 1.8
                 OnSelect: =""
@@ -151,7 +173,12 @@
                 BorderColor: =RGBA(231, 231, 231, 1)
                 DisabledBorderColor: =RGBA(230, 230, 230, 0.5)
                 DisabledFill: =RGBA(244, 244, 244, 0.7)
-                DisplayMode: =If(UserPerfil = "Operador", DisplayMode.Disabled, DisplayMode.Edit)
+                DisplayMode: |-
+                    =If(
+                        UserPerfil = "Estoquista",
+                        DisplayMode.Disabled,
+                        DisplayMode.Edit
+                    )
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =120
                 HoverFill: =RGBA(231, 231, 231, 0.15)
