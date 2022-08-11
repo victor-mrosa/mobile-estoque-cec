@@ -1,6 +1,6 @@
 "'Screen Notifications' As screen":
 
-    Image1 As image:
+    "'img-Notifications-Sucesso' As image":
         Height: =212
         Image: ='tela-geral-imgCheck'
         Width: =245
@@ -8,7 +8,7 @@
         Y: =331
         ZIndex: =1
 
-    Label5 As label:
+    "'lbl-Notifications-Descricao' As label":
         Align: =Align.Center
         Font: =Font.'Lato Black'
         Height: =74
@@ -18,7 +18,7 @@
         Y: =566
         ZIndex: =2
 
-    Timer1 As timer:
+    "'tmb-Notification-3000' As timer":
         AutoStart: =true
         Duration: =3000
         Height: =70
@@ -28,7 +28,7 @@
         Y: =1066
         ZIndex: =3
 
-    Label6 As label:
+    "'lbl-Notifications-Codigo' As label":
         Align: =Align.Center
         Font: =Font.Lato
         Height: =56
