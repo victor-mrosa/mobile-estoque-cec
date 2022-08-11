@@ -55,52 +55,6 @@
     "dependents": [],
     "id": "7b535035-4431-43b8-9fc0-5c0a6a839599"
   },
-  "7e579f8a-3598-486b-89eb-890270eb3f14": {
-    "connectionParameters": {
-      "workFlowCallbackUri": "https://prod-23.brazilsouth.logic.azure.com:443/workflows/5d87ae1e947248758c4763683971538a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=RDmcZmOphJ1YUPdt0CdmSNnVBkXgCU_eYaFLHOuwoPw",
-      "workflowEndpoint": "/subscriptions/5072fcc3-8341-442e-9b98-4b441017c969/resourceGroups/00466ab9c56049f086af238be4a1ac67-2cb2f7c67a6043b58c974b21949aab67-env/providers/Microsoft.Logic/workflows/8275a5df-c4d0-1f43-3bf3-a58dc2958863",
-      "workflowEntityId": "6e27670f-4075-ec11-8943-000d3a88df92",
-      "workflowName": "8275a5df-c4d0-1f43-3bf3-a58dc2958863",
-      "workflowPath": "/subscriptions/5072fcc3-8341-442e-9b98-4b441017c969/resourceGroups/00466ab9c56049f086af238be4a1ac67-2cb2f7c67a6043b58c974b21949aab67-env/providers/Microsoft.Logic/workflows/8275a5df-c4d0-1f43-3bf3-a58dc2958863"
-    },
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Fluxos lógicos",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "d03b879c-94db-49c5-a768-d83a3b363ee8": {
-          "value": "shared_sharepointonline"
-        },
-        "workflowEntityId": {
-          "value": "6e27670f-4075-ec11-8943-000d3a88df92"
-        },
-        "workflowName": {
-          "value": "8275a5df-c4d0-1f43-3bf3-a58dc2958863"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_sharepointonline": {
-          "value": "d03b879c-94db-49c5-a768-d83a3b363ee8"
-        },
-        "workflowEntityId": {
-          "value": "6e27670f-4075-ec11-8943-000d3a88df92"
-        },
-        "workflowName": {
-          "value": "8275a5df-c4d0-1f43-3bf3-a58dc2958863"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Fluxo-LogdeAcessos"
-    ],
-    "dependencies": {
-      "shared_sharepointonline": "d03b879c-94db-49c5-a768-d83a3b363ee8"
-    },
-    "dependents": [],
-    "id": "7e579f8a-3598-486b-89eb-890270eb3f14"
-  },
   "c50491f5-3ecb-40b1-980a-8da639f83772": {
     "connectionParameters": {
       "sku": "Enterprise"
