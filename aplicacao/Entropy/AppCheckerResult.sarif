@@ -14,846 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressHeader.'ico-AuditAddress-Voltar'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressHeader.'ico-AuditAddress-Voltar'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit Address",
-                "type": "'Screen Audit Address'.ctnAuditAddressHeader.'ico-AuditAddress-Voltar'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressHeader.'ico-AuditAddress-Voltar'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressHeader.'ico-AuditAddress-Voltar'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Audit Address",
-                "type": "'Screen Audit Address'.ctnAuditAddressHeader.'ico-AuditAddress-Voltar'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressContent.'glr-AuditAddress-Enderecos'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressContent.'glr-AuditAddress-Enderecos'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit Address",
-                "type": "'Screen Audit Address'.ctnAuditAddressContent.'glr-AuditAddress-Enderecos'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressContent.'glr-AuditAddress-Enderecos'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressContent.'glr-AuditAddress-Enderecos'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Audit Address",
-                "type": "'Screen Audit Address'.ctnAuditAddressContent.'glr-AuditAddress-Enderecos'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressContent.'cmb-AuditAddress-Estoquista'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressContent.'cmb-AuditAddress-Estoquista'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit Address",
-                "type": "'Screen Audit Address'.ctnAuditAddressContent.'cmb-AuditAddress-Estoquista'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit List",
-                "type": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Audit List",
-                "type": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit List",
-                "type": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Audit List",
-                "type": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-Estoquista'.ComboBox5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-Estoquista'.ComboBox5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit List",
-                "type": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-Estoquista'.ComboBox5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-IdEstoquista'.DataCardValue19.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-IdEstoquista'.DataCardValue19.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit List",
-                "type": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-IdEstoquista'.DataCardValue19"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerHeader.'ico-AuditManager-Voltar'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerHeader.'ico-AuditManager-Voltar'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit Manager",
-                "type": "'Screen Audit Manager'.ctnAuditManagerHeader.'ico-AuditManager-Voltar'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerHeader.'ico-AuditManager-Voltar'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerHeader.'ico-AuditManager-Voltar'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Audit Manager",
-                "type": "'Screen Audit Manager'.ctnAuditManagerHeader.'ico-AuditManager-Voltar'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerFooter.'lbl-AuditManager-Footer'.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerFooter.'lbl-AuditManager-Footer'.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "Screen Audit Manager",
-                "type": "'Screen Audit Manager'.ctnAuditManagerFooter.'lbl-AuditManager-Footer'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerFooter.'lbl-AuditManager-Footer'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerFooter.'lbl-AuditManager-Footer'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Audit Manager",
-                "type": "'Screen Audit Manager'.ctnAuditManagerFooter.'lbl-AuditManager-Footer'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit Mount",
-                "type": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Audit Mount",
-                "type": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-Categoria'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-Categoria'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit Mount",
-                "type": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-Categoria'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-Local'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-Local'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit Mount",
-                "type": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-Local'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-CodigoProduto'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-CodigoProduto'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit Mount",
-                "type": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-CodigoProduto'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'ico-AuditMount-Carregar'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'ico-AuditMount-Carregar'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit Mount",
-                "type": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'ico-AuditMount-Carregar'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'ico-AuditMount-Carregar'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'ico-AuditMount-Carregar'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Audit Mount",
-                "type": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'ico-AuditMount-Carregar'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountFooter.'ico-AuditMount-ListarAuditorias'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountFooter.'ico-AuditMount-ListarAuditorias'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit Mount",
-                "type": "'Screen Audit Mount'.ctnAuditMountFooter.'ico-AuditMount-ListarAuditorias'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountFooter.'ico-AuditMount-ListarAuditorias'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountFooter.'ico-AuditMount-ListarAuditorias'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Audit Mount",
-                "type": "'Screen Audit Mount'.ctnAuditMountFooter.'ico-AuditMount-ListarAuditorias'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit Open",
-                "type": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Audit Open",
-                "type": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen Audit Open",
-                "type": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Screen Audit Open",
-                "type": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Screen Audit Products'.ctnAuditProductsHeader.'ico-AuditProducts-Voltar'.AccessibleLabel"
                 }
               ],
@@ -4058,6 +3218,186 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit List",
+                "type": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Audit List",
+                "type": "'Screen Audit List'.ctnAuditListHeader.'ico-AuditList-Voltar'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit List",
+                "type": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Audit List",
+                "type": "'Screen Audit List'.ctnAuditListContent.'glr-AuditList-Estoquistas'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-Estoquista'.ComboBox5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-Estoquista'.ComboBox5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit List",
+                "type": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-Estoquista'.ComboBox5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-IdEstoquista'.DataCardValue19.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-IdEstoquista'.DataCardValue19.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit List",
+                "type": "'Screen Audit List'.ctnAuditListFooter.'frm-AuditList-EditEstoquista'.'crd-IdEstoquista'.DataCardValue19"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -7454,17 +6794,677 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.tela-inicial-imgEstoque"
+                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerHeader.'ico-AuditManager-Voltar'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.tela-inicial-imgEstoque",
+                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerHeader.'ico-AuditManager-Voltar'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "tela-inicial-imgEstoque",
+                "member": "AccessibleLabel",
+                "module": "Screen Audit Manager",
+                "type": "'Screen Audit Manager'.ctnAuditManagerHeader.'ico-AuditManager-Voltar'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerHeader.'ico-AuditManager-Voltar'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerHeader.'ico-AuditManager-Voltar'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Audit Manager",
+                "type": "'Screen Audit Manager'.ctnAuditManagerHeader.'ico-AuditManager-Voltar'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerFooter.'lbl-AuditManager-Footer'.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerFooter.'lbl-AuditManager-Footer'.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Screen Audit Manager",
+                "type": "'Screen Audit Manager'.ctnAuditManagerFooter.'lbl-AuditManager-Footer'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerFooter.'lbl-AuditManager-Footer'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Manager'.ctnAuditManagerFooter.'lbl-AuditManager-Footer'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Audit Manager",
+                "type": "'Screen Audit Manager'.ctnAuditManagerFooter.'lbl-AuditManager-Footer'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressHeader.'ico-AuditAddress-Voltar'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressHeader.'ico-AuditAddress-Voltar'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit Address",
+                "type": "'Screen Audit Address'.ctnAuditAddressHeader.'ico-AuditAddress-Voltar'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressHeader.'ico-AuditAddress-Voltar'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressHeader.'ico-AuditAddress-Voltar'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Audit Address",
+                "type": "'Screen Audit Address'.ctnAuditAddressHeader.'ico-AuditAddress-Voltar'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressContent.'glr-AuditAddress-Enderecos'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressContent.'glr-AuditAddress-Enderecos'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit Address",
+                "type": "'Screen Audit Address'.ctnAuditAddressContent.'glr-AuditAddress-Enderecos'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressContent.'glr-AuditAddress-Enderecos'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressContent.'glr-AuditAddress-Enderecos'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Audit Address",
+                "type": "'Screen Audit Address'.ctnAuditAddressContent.'glr-AuditAddress-Enderecos'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressContent.'cmb-AuditAddress-Estoquista'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Address'.ctnAuditAddressContent.'cmb-AuditAddress-Estoquista'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit Address",
+                "type": "'Screen Audit Address'.ctnAuditAddressContent.'cmb-AuditAddress-Estoquista'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit Mount",
+                "type": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Audit Mount",
+                "type": "'Screen Audit Mount'.ctnAuditMountHeader.'ico-AuditMount-Voltar'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-Categoria'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-Categoria'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit Mount",
+                "type": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-Categoria'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-Local'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-Local'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit Mount",
+                "type": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-Local'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-CodigoProduto'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-CodigoProduto'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit Mount",
+                "type": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'cmb-AuditMount-CodigoProduto'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'ico-AuditMount-Carregar'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'ico-AuditMount-Carregar'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit Mount",
+                "type": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'ico-AuditMount-Carregar'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'ico-AuditMount-Carregar'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'ico-AuditMount-Carregar'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Audit Mount",
+                "type": "'Screen Audit Mount'.ctnAuditMountContent.ctnAuditMountFilters.'ico-AuditMount-Carregar'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountFooter.'ico-AuditMount-ListarAuditorias'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountFooter.'ico-AuditMount-ListarAuditorias'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit Mount",
+                "type": "'Screen Audit Mount'.ctnAuditMountFooter.'ico-AuditMount-ListarAuditorias'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountFooter.'ico-AuditMount-ListarAuditorias'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Mount'.ctnAuditMountFooter.'ico-AuditMount-ListarAuditorias'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Audit Mount",
+                "type": "'Screen Audit Mount'.ctnAuditMountFooter.'ico-AuditMount-ListarAuditorias'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit Open",
+                "type": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Audit Open",
+                "type": "'Screen Audit Open'.ctnAuditOpenHeader.'ico-AuditOpen-Voltar'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen Audit Open",
+                "type": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen Audit Open",
+                "type": "'Screen Audit Open'.ctnAuditOpenContent.'glr-AuditOpen-Auditorias'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.OnStart"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.OnStart",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnStart",
                 "module": "App",
                 "type": "App"
               }
@@ -7476,7 +7476,7 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-UnusedMediaResources",
+          "ruleId": "app-CollectDelegatableDataSource",
           "ruleIndex": 3
         },
         {
@@ -7507,7 +7507,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -7537,37 +7537,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.OnStart"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.OnStart",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "OnStart",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -7597,7 +7567,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -7627,7 +7597,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -7657,7 +7627,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -7687,7 +7657,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -7717,7 +7687,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -7746,6 +7716,66 @@
             "level": "Medium"
           },
           "ruleId": "app-DataSourceDefaultMaxRowsLimit",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Audit Products'.locId"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Audit Products'.locId",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "locId",
+                "module": "Screen Audit Products",
+                "type": "'Screen Audit Products'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Screen Stock Move'.produtoSelecionado"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Screen Stock Move'.produtoSelecionado",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "produtoSelecionado",
+                "module": "Screen Stock Move",
+                "type": "'Screen Stock Move'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
           "ruleIndex": 5
         },
         {
@@ -7776,7 +7806,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -7806,67 +7836,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Audit Products'.locId"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Audit Products'.locId",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "locId",
-                "module": "Screen Audit Products",
-                "type": "'Screen Audit Products'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Screen Stock Move'.produtoSelecionado"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Screen Stock Move'.produtoSelecionado",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "produtoSelecionado",
-                "module": "Screen Stock Move",
-                "type": "'Screen Stock Move'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 6
+          "ruleIndex": 5
         }
       ],
       "tool": {
@@ -7923,23 +7893,6 @@
                 "level": "Medium",
                 "primaryCategory": "accessibility",
                 "whyFix": "If the focus isn't visible, people who don't use a mouse won't be able to see it when they're interacting with the app."
-              }
-            },
-            {
-              "id": "app-UnusedMediaResources",
-              "messageStrings": {
-                "issue": {
-                  "text": "Arquivos de mídia não utilizados"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remova o arquivo de mídia não utilizado no painel Mídia."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "Este arquivo de mídia não é referenciado por nenhuma fórmula de controle, portanto não é necessário. Sua remoção melhorará o desempenho."
               }
             },
             {
