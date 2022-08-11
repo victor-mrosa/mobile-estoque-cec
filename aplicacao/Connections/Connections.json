@@ -1,4 +1,44 @@
 {
+  "35cee20b-e065-491b-8a88-4a23a1f00486": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-02.brazilsouth.logic.azure.com:443/workflows/cd63404193284786988d7ce8a30609c7/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=iumxDFUZgEeVlAUiMjDWyuVGdfhsgRmkAn7dbS64zIw",
+      "workflowEndpoint": "/subscriptions/5072fcc3-8341-442e-9b98-4b441017c969/resourceGroups/00466ab9c56049f086af238be4a1ac67-2cb2f7c67a6043b58c974b21949aab67-env/providers/Microsoft.Logic/workflows/2324cf8a-c8bb-bf45-a6e9-43e61190e0a6",
+      "workflowEntityId": "9deb79df-4175-ec11-8943-000d3a88df92",
+      "workflowName": "2324cf8a-c8bb-bf45-a6e9-43e61190e0a6",
+      "workflowPath": "/subscriptions/5072fcc3-8341-442e-9b98-4b441017c969/resourceGroups/00466ab9c56049f086af238be4a1ac67-2cb2f7c67a6043b58c974b21949aab67-env/providers/Microsoft.Logic/workflows/2324cf8a-c8bb-bf45-a6e9-43e61190e0a6"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {
+          "value": "9deb79df-4175-ec11-8943-000d3a88df92"
+        },
+        "workflowName": {
+          "value": "2324cf8a-c8bb-bf45-a6e9-43e61190e0a6"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {
+          "value": "9deb79df-4175-ec11-8943-000d3a88df92"
+        },
+        "workflowName": {
+          "value": "2324cf8a-c8bb-bf45-a6e9-43e61190e0a6"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "[Fluxo]Estoque-Manual-Log-Acessos"
+    ],
+    "dependencies": {
+      "shared_office365users_1": "7b535035-4431-43b8-9fc0-5c0a6a839599",
+      "shared_sharepointonline_1": "548e3042-69a4-4f9b-91d8-3eb1d9de403e"
+    },
+    "dependents": [],
+    "id": "35cee20b-e065-491b-8a88-4a23a1f00486"
+  },
   "548e3042-69a4-4f9b-91d8-3eb1d9de403e": {
     "connectionParameters": {
       "sku": "Enterprise"
@@ -31,7 +71,8 @@
     ],
     "dependencies": {},
     "dependents": [
-      "eec28f40-0a53-4d53-b6f6-fd94a7f7033b"
+      "eec28f40-0a53-4d53-b6f6-fd94a7f7033b",
+      "35cee20b-e065-491b-8a88-4a23a1f00486"
     ],
     "id": "548e3042-69a4-4f9b-91d8-3eb1d9de403e"
   },
@@ -52,7 +93,9 @@
       "users-office"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "35cee20b-e065-491b-8a88-4a23a1f00486"
+    ],
     "id": "7b535035-4431-43b8-9fc0-5c0a6a839599"
   },
   "c50491f5-3ecb-40b1-980a-8da639f83772": {
@@ -142,9 +185,7 @@
       "listUsuarios"
     ],
     "dependencies": {},
-    "dependents": [
-      "7e579f8a-3598-486b-89eb-890270eb3f14"
-    ],
+    "dependents": [],
     "id": "d03b879c-94db-49c5-a768-d83a3b363ee8"
   },
   "eec28f40-0a53-4d53-b6f6-fd94a7f7033b": {

@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "e4109983-4ba1-415e-8988-2b925e63135d",
+    "Name": "[Fluxo]Estoque-Manual-Log-Acessos",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "9deb79df-4175-ec11-8943-000d3a88df92"
+  }
+]

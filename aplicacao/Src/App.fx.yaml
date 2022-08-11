@@ -9,6 +9,8 @@ App As appinfo:
         
         Set(UserPerfil,LookUp(listUsuarios,'Nome Usuario'.Email = User().Email).Perfil.Value);
         
+        '[Fluxo]Estoque-Manual-Log-Acessos'.Run(User().Email)
+        
         
     StartScreen: =
 
