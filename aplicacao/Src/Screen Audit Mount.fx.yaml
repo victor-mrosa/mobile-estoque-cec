@@ -56,6 +56,7 @@
                 Height: =53
                 Size: =18
                 Text: ="Ocultar Estoque"
+                Visible: =If(UserPerfil = "Estoquista",false,true)
                 Width: =162
                 X: =385
                 Y: =19
@@ -72,6 +73,7 @@
                     =Patch(listParametros,First(Filter(listParametros,Descricao = "Ocultar valores do estoque")),{Valor: "Não"})
                 Size: =21
                 Text: =""
+                Visible: =If(UserPerfil = "Estoquista",false,true)
                 Width: =53
                 X: =328
                 Y: =13
@@ -292,23 +294,6 @@
         Width: =640
         ZIndex: =3
 
-        "'btn-AuditMount-Relatorios' As button":
-            BorderColor: =White
-            BorderThickness: =1
-            Fill: =RGBA(24, 56, 132, 1)
-            Font: =Font.'Lato Black'
-            Height: =31
-            OnSelect: =Navigate('Screen Audit Report',ScreenTransition.CoverRight)
-            RadiusBottomLeft: =300
-            RadiusBottomRight: =300
-            RadiusTopLeft: =300
-            RadiusTopRight: =300
-            Text: ="Relatórios"
-            Width: =138
-            X: =489
-            Y: =19
-            ZIndex: =1
-
         "'lbl-AuditMount-MontarAuditoria' As label":
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
@@ -318,7 +303,7 @@
             Size: =25
             Text: ="Montar Auditoria"
             Width: =640
-            ZIndex: =2
+            ZIndex: =1
 
         "'ico-AuditMount-Voltar' As icon.ArrowLeft":
             Color: =RGBA(255, 255, 255, 1)
@@ -332,5 +317,23 @@
                 Reset('cmb-AuditMount-CodigoProduto')
             X: =7
             Y: =12
+            ZIndex: =2
+
+        "'btn-AuditMount-Relatorios' As button":
+            BorderColor: =White
+            BorderThickness: =1
+            Fill: =RGBA(24, 56, 132, 1)
+            Font: =Font.'Lato Black'
+            Height: =31
+            OnSelect: =Navigate('Screen Audit Report',ScreenTransition.CoverRight)
+            RadiusBottomLeft: =300
+            RadiusBottomRight: =300
+            RadiusTopLeft: =300
+            RadiusTopRight: =300
+            Text: ="Relatórios"
+            Visible: =If(UserPerfil = "Estoquista",false, true)
+            Width: =138
+            X: =489
+            Y: =19
             ZIndex: =3
 
