@@ -17,14 +17,14 @@
             ShowNavigation: =true
             ShowScrollbar: =false
             TemplatePadding: =0
-            TemplateSize: =328
+            TemplateSize: =282
             Y: =116
             ZIndex: =1
 
-            Button1 As button:
+            "'btn-Relatorios-Layout' As button":
                 BorderThickness: =1
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =302
+                Height: =262
                 HoverFill: =Self.Fill
                 OnSelect: =Select(Parent)
                 RadiusBottomLeft: =2
@@ -38,238 +38,269 @@
                 Y: =12
                 ZIndex: =1
 
-            Label13 As label:
-                Font: =Font.Lato
-                FontWeight: =FontWeight.Semibold
-                Height: =44
-                Italic: =true
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: |-
-                    ="Código Auditoria: "
-                Underline: =true
-                Width: =175
-                X: =44
-                Y: =17
-                ZIndex: =3
-
-            Label13_1 As label:
-                Font: =Font.Lato
-                Height: =44
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: =ThisItem.'Codigo Auditoria'
-                Underline: =true
-                Width: =123
-                X: =201
-                Y: =17
-                ZIndex: =4
-
-            Label13_2 As label:
-                Font: =Font.Lato
-                FontWeight: =FontWeight.Semibold
-                Height: =44
-                Italic: =true
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: |-
-                    ="Código Produto: "
-                Width: =175
-                X: =44
-                Y: =61
-                ZIndex: =5
-
-            Label13_3 As label:
-                Font: =Font.Lato
-                Height: =44
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: =ThisItem.'Codigo Produto'
-                Width: =137
-                X: =187
-                Y: =61
-                ZIndex: =6
-
-            Label13_4 As label:
-                Font: =Font.Lato
-                FontWeight: =FontWeight.Semibold
-                Height: =44
-                Italic: =true
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: |-
-                    ="Local Auditado: "
-                Width: =175
-                X: =44
-                Y: =105
-                ZIndex: =7
-
-            Label13_5 As label:
-                Font: =Font.Lato
-                Height: =44
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: =ThisItem.Local
-                Width: =141
-                X: =183
-                Y: =105
-                ZIndex: =8
-
-            Label13_6 As label:
-                Font: =Font.Lato
-                FontWeight: =FontWeight.Semibold
-                Height: =44
-                Italic: =true
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: |-
-                    ="Código Auditoria: "
-                Width: =175
-                X: =44
-                Y: =148
-                ZIndex: =9
-
-            Label13_7 As label:
-                Font: =Font.Lato
-                Height: =44
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: =ThisItem.'Codigo Auditoria'
-                Width: =123
-                X: =201
-                Y: =148
-                ZIndex: =10
-
-            Label13_8 As label:
-                Font: =Font.Lato
-                FontWeight: =FontWeight.Semibold
-                Height: =46
-                Italic: =true
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: |-
-                    ="Status Auditoria: "
-                Width: =115
-                X: =44
-                Y: =201
-                ZIndex: =11
-
-            Label13_9 As label:
-                Font: =Font.Lato
-                Height: =46
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: |-
-                    =//LookUp(listGerarAuditorias;'Codigo Auditoria' = ThisItem.'Codigo Auditoria').Status
-                    ThisItem.Status
-                Width: =144
-                X: =159
-                Y: =201
-                ZIndex: =12
-
-            Label13_10 As label:
-                Fill: =RGBA(255, 255, 255, 1)
-                Font: =Font.Lato
-                FontWeight: =FontWeight.Semibold
-                Height: =44
-                Italic: =true
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: |-
-                    ="Contagem: "
-                Width: =107
-                X: =371
-                Y: =38
-                ZIndex: =13
-
-            Label13_11 As label:
-                Align: =Align.Center
-                Color: =RGBA(255, 255, 255, 1)
-                Fill: =RGBA(221, 79, 14, 1)
-                Font: =Font.'Lato Black'
-                Height: =44
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: =ThisItem.Sequencia & "°"
-                Width: =38
-                X: =478
-                Y: =38
-                ZIndex: =14
-
-            Label13_12 As label:
-                Font: =Font.Lato
-                FontWeight: =FontWeight.Semibold
-                Height: =44
-                Italic: =true
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: |-
-                    ="Qtd Sistema: "
-                Width: =107
-                X: =371
-                Y: =93
-                ZIndex: =15
-
-            Label13_13 As label:
-                Font: =Font.Lato
-                Height: =44
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: =ThisItem.'Quantidade Sistemica'
-                Width: =123
-                X: =478
-                Y: =93
-                ZIndex: =16
-
-            Label13_14 As label:
-                Font: =Font.Lato
-                FontWeight: =FontWeight.Semibold
-                Height: =44
-                Italic: =true
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: |-
-                    ="Qtd Fisica: "
-                Width: =107
-                X: =371
-                Y: =157
-                ZIndex: =17
-
-            Label13_15 As label:
-                Font: =Font.Lato
-                Height: =44
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: =ThisItem.'Quantidade Fisica'
-                Width: =123
-                X: =478
-                Y: =157
+            "'grp-Relatorios-Contagem' As group":
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
                 ZIndex: =18
 
-            Label13_16 As label:
-                Font: =Font.Lato
-                FontWeight: =FontWeight.Semibold
-                Height: =42
-                Italic: =true
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: |-
-                    ="Descrição: "
-                Width: =103
-                X: =44
-                Y: =260
-                ZIndex: =19
+                "'lbl-Relatorios-Contagem' As label":
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =44
+                    Italic: =true
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: |-
+                        ="Contagem: "
+                    Width: =107
+                    X: =371
+                    Y: =38
+                    ZIndex: =8
 
-            Label13_17 As label:
-                Font: =Font.Lato
-                Height: =42
-                OnSelect: =Select(Parent)
-                Size: =14
-                Text: =ThisItem.Descricao
-                Width: =443
-                X: =147
-                Y: =260
+                "'lbl-Relatorios-ContagemValue' As label":
+                    Align: =Align.Center
+                    Color: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(221, 79, 14, 1)
+                    Font: =Font.'Lato Black'
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: =ThisItem.Sequencia & "°"
+                    Width: =38
+                    X: =478
+                    Y: =38
+                    ZIndex: =9
+
+            "'grp-Relatorios-StatusProduto' As group":
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =18
+
+                "'lbl-Relatorios-StatusProduto' As label":
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =46
+                    Italic: =true
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: |-
+                        ="Status Auditoria: "
+                    Width: =115
+                    X: =44
+                    Y: =149
+                    ZIndex: =10
+
+                "'lbl-Relaatorios-StatusProdutoValue' As label":
+                    Font: =Font.Lato
+                    Height: =46
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: |-
+                        =//LookUp(listGerarAuditorias;'Codigo Auditoria' = ThisItem.'Codigo Auditoria').Status
+                        ThisItem.Status
+                    Width: =144
+                    X: =159
+                    Y: =149
+                    ZIndex: =11
+
+            "'grp-Relatorios-QtdSistema' As group":
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =18
+
+                "'lbl-Relatorios-QtdSistema' As label":
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =44
+                    Italic: =true
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: |-
+                        ="Qtd Sistema: "
+                    Width: =107
+                    X: =371
+                    Y: =93
+                    ZIndex: =6
+
+                "'lbl-Relatorios-QtdSistemaValue' As label":
+                    Font: =Font.Lato
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: =ThisItem.'Quantidade Sistemica'
+                    Width: =123
+                    X: =478
+                    Y: =93
+                    ZIndex: =7
+
+            "'grp-Relatorios-QtdFisica' As group":
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =18
+
+                "'lbl-Relatorios-QtdFisica' As label":
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =44
+                    Italic: =true
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: |-
+                        ="Qtd Fisica: "
+                    Width: =107
+                    X: =371
+                    Y: =157
+                    ZIndex: =4
+
+                "'lbl-Relatorios-QtdFisicaValue' As label":
+                    Font: =Font.Lato
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: =ThisItem.'Quantidade Fisica'
+                    Width: =123
+                    X: =478
+                    Y: =157
+                    ZIndex: =5
+
+            "'grp-Relatorios-Descricao' As group":
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =18
+
+                "'lbl-Relatorios-Descricao' As label":
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =42
+                    Italic: =true
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: |-
+                        ="Descrição: "
+                    Width: =103
+                    X: =44
+                    Y: =214
+                    ZIndex: =2
+
+                "'lbl-Relatorios-DescricaoValue' As label":
+                    Font: =Font.Lato
+                    Height: =42
+                    OnSelect: =Select(Parent)
+                    Size: =14
+                    Text: =ThisItem.Descricao
+                    Width: =443
+                    X: =147
+                    Y: =214
+                    ZIndex: =3
+
+            "'grp-Relatorios-CodigoAuditoria' As group":
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
                 ZIndex: =20
+
+                "'lbl-Relatorios-CodigoAuditoria' As label":
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =44
+                    Italic: =true
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: |-
+                        ="Código Auditoria: "
+                    Underline: =true
+                    Width: =175
+                    X: =44
+                    Y: =17
+                    ZIndex: =16
+
+                "'lbl-Relatorios-CodigoAuditoriaValue' As label":
+                    Font: =Font.Lato
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: =ThisItem.'Codigo Auditoria'
+                    Underline: =true
+                    Width: =123
+                    X: =201
+                    Y: =17
+                    ZIndex: =17
+
+            "'grp-Relatorios-CodigoProduto' As group":
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =20
+
+                "'lbl-Relatorios-CodigoProduto' As label":
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =44
+                    Italic: =true
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: |-
+                        ="Código Produto: "
+                    Width: =175
+                    X: =44
+                    Y: =61
+                    ZIndex: =14
+
+                "'lbl-Relatorios-CodigoProdutoValue' As label":
+                    Font: =Font.Lato
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: =ThisItem.'Codigo Produto'
+                    Width: =137
+                    X: =187
+                    Y: =61
+                    ZIndex: =15
+
+            "'grp-Relatorios-Local' As group":
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =20
+
+                "'lbl-Relatorios-Local' As label":
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =44
+                    Italic: =true
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: |-
+                        ="Local Auditado: "
+                    Width: =175
+                    X: =44
+                    Y: =105
+                    ZIndex: =12
+
+                "'lbl-Relatorios-LocalValue' As label":
+                    Font: =Font.Lato
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =15
+                    Text: =ThisItem.Local
+                    Width: =141
+                    X: =183
+                    Y: =105
+                    ZIndex: =13
 
         "'ipt-AuditReport-CodigoAuditoria' As text":
             BorderThickness: =1

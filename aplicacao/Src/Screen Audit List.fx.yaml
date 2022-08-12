@@ -215,7 +215,7 @@
             Y: =108
             ZIndex: =1
 
-            Button8 As button:
+            "'btn-Estoquistas-Layout' As button":
                 BorderThickness: =1
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =70
@@ -232,22 +232,7 @@
                 Y: =15
                 ZIndex: =1
 
-            Title2 As label:
-                Font: =Font.'Lato Black'
-                Height: =30
-                OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =ThisItem.Result
-                VerticalAlign: =VerticalAlign.Top
-                Width: =175
-                X: =46
-                Y: =35
-                ZIndex: =2
-
-            NextArrow2 As icon.ChevronRight:
+            "'ico-Estoquistas-Editar' As icon.ChevronRight":
                 AccessibleLabel: =Self.Tooltip
                 Height: =60
                 Icon: =Icon.ArrowRight
@@ -263,34 +248,56 @@
                 Y: =20
                 ZIndex: =3
 
-            Title2_1 As label:
+            "'lbl-Estoquistas-CodigoAuditoria' As label":
                 Font: =Font.'Lato Black'
                 Height: =30
-                Italic: =true
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Text: =LookUp(listGerarAuditorias,'Codigo Auditoria' = ThisItem.Result).Estoquista
+                Text: =ThisItem.Result
                 VerticalAlign: =VerticalAlign.Top
                 Width: =175
-                X: =326
+                X: =46
                 Y: =35
                 ZIndex: =5
 
-            Image3 As image:
-                Height: =50
-                Image: =If(locLinhasAfetadas > 0,'users-office'.UserPhoto(LookUp(listGerarAuditorias,'Codigo Auditoria' = ThisItem.Result).'ID Estoquista'))
-                OnSelect: =Select(Parent)
-                RadiusBottomLeft: =200
-                RadiusBottomRight: =200
-                RadiusTopLeft: =200
-                RadiusTopRight: =200
-                Width: =51
-                X: =263
-                Y: =25
-                ZIndex: =6
+            "'grp-Estoquistas-Estoquista' As group":
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =7
+
+                "'lbl-Estoquistas-Estoquista' As label":
+                    Font: =Font.'Lato Black'
+                    Height: =30
+                    Italic: =true
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =LookUp(listGerarAuditorias,'Codigo Auditoria' = ThisItem.Result).Estoquista
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =175
+                    X: =326
+                    Y: =35
+                    ZIndex: =2
+
+                "'img-Estoquistas-Estoquista' As image":
+                    Height: =50
+                    Image: =If(locLinhasAfetadas > 0,'users-office'.UserPhoto(LookUp(listGerarAuditorias,'Codigo Auditoria' = ThisItem.Result).'ID Estoquista'))
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =200
+                    RadiusBottomRight: =200
+                    RadiusTopLeft: =200
+                    RadiusTopRight: =200
+                    Width: =51
+                    X: =263
+                    Y: =25
+                    ZIndex: =4
 
         "'lbl-AuditList-Descricao' As label":
             Align: =Align.Center
